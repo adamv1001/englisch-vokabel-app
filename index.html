@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Englisch-Vokabelspiel – Go Ahead 6</title>
+<meta name="description" content="Vokabelspiel zu Go Ahead 6 – Unit für Unit üben, offline">
+<meta name="theme-color" content="#c8102e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vokabeln">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<style>
+:root{--rot:#c8102e;--blau:#012169;--text:#1a2332;--muted:#5a6a7a;--card:#fff;--ok:#1e9e5a;--warn:#e67e22;--bg1:#ffe8ec;--bg2:#e8eef8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);font-size:19px;line-height:1.4;
+ background:linear-gradient(165deg,var(--bg1) 0%,#fff 45%,var(--bg2) 100%);background-attachment:fixed;min-height:100vh;
+ padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:12px 14px 48px}
+.screen{display:none}.screen.on{display:block}
+h1{font-size:28px;margin:8px 0 2px;text-align:center;color:var(--blau)}
+.sub{text-align:center;color:var(--muted);margin:0 0 10px;font-size:16px}
+.card{background:var(--card);border-radius:22px;padding:16px;box-shadow:0 6px 22px rgba(1,33,105,.1);margin:12px 0;overflow-wrap:anywhere}
+.btn{display:block;width:100%;min-height:54px;border:none;border-radius:16px;font:inherit;font-weight:700;font-size:20px;color:#fff;background:var(--rot);
+ box-shadow:0 4px 0 rgba(0,0,0,.18);margin:10px 0;padding:10px 14px;cursor:pointer;touch-action:manipulation}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
+.btn.blau{background:var(--blau)}.btn.grau{background:#8a979f}.btn.gruen{background:var(--ok)}.btn.warn{background:var(--warn)}
+.btn.klein{min-height:46px;font-size:17px}.btn:disabled{opacity:.45}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.units{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.unit{border:3px solid #d5dde8;border-radius:18px;background:#fff;padding:14px 10px;min-height:88px;font:inherit;font-weight:700;cursor:pointer;text-align:center;touch-action:manipulation;color:var(--text)}
+.unit.on{border-color:var(--rot);background:#ffe8ec;box-shadow:0 0 0 2px rgba(200,16,46,.2)}
+.unit .n{display:block;font-size:28px;color:var(--rot)}.unit small{display:block;color:var(--muted);font-weight:600;margin-top:4px}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.seg.vier{grid-template-columns:repeat(2,minmax(0,1fr))}
+.seg button{min-height:52px;border:3px solid #d5dde8;border-radius:14px;background:#fff;font:inherit;font-weight:700;font-size:16px;cursor:pointer;color:var(--text);padding:8px;touch-action:manipulation}
+.seg button.on{border-color:var(--blau);background:#e8eef8;color:var(--blau)}
+.lab{font-size:15px;font-weight:700;color:var(--muted);margin:8px 0 6px;display:block}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;background:rgba(255,255,255,.95);border-radius:16px;padding:8px 12px;font-weight:700;position:sticky;top:calc(env(safe-area-inset-top) + 4px);z-index:5;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.top .h{font-size:22px}.top .p{color:var(--rot)}.top .s{color:var(--warn);min-width:44px;text-align:center}
+.bar{height:10px;background:rgba(255,255,255,.8);border-radius:6px;overflow:hidden;margin:8px 2px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--rot),#ffd34d);transition:width .3s}
+.qh{display:flex;justify-content:space-between;color:var(--muted);font-size:15px;font-weight:700}
+.prompt{font-size:32px;font-weight:800;text-align:center;margin:16px 0 8px;color:var(--blau);line-height:1.25}
+.dir{text-align:center;font-size:15px;color:var(--muted);font-weight:700}
+.opts{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+.opt{min-height:64px;border:3px solid #d5dde8;border-radius:16px;background:#fff;font:inherit;font-size:22px;font-weight:700;color:var(--text);cursor:pointer;padding:12px;touch-action:manipulation;text-align:left}
+.opt:disabled{opacity:.55}
+.ansrow{display:flex;gap:8px;align-items:stretch;margin:12px 0}
+.ansrow input{flex:1;min-width:0;min-height:56px;font-size:22px;font-weight:700;border:3px solid #d5dde8;border-radius:14px;padding:10px 12px;font-family:inherit;color:var(--text)}
+.ansrow input:focus{outline:none;border-color:var(--blau);box-shadow:0 0 0 3px rgba(1,33,105,.15)}
+.mic{min-width:56px;min-height:56px;border:none;border-radius:14px;background:var(--blau);color:#fff;font-size:26px;cursor:pointer;touch-action:manipulation;flex-shrink:0}
+.mic.listening{background:var(--rot);animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.7}}
+.heard{font-size:15px;color:var(--muted);text-align:center;min-height:22px;margin:4px 0}
+.cardflip{perspective:900px;margin:16px auto;max-width:420px;height:220px;cursor:pointer}
+.cardflip .inner{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.cardflip.show .inner{transform:rotateY(180deg)}
+.cardflip .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;font-size:30px;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.cardflip .front{background:linear-gradient(135deg,#012169,#1a4a9e);color:#fff}
+.cardflip .back{background:linear-gradient(135deg,#c8102e,#e85a6e);color:#fff;transform:rotateY(180deg)}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match .tile{min-height:64px;border:3px solid #d5dde8;border-radius:14px;background:#fff;font:inherit;font-weight:700;font-size:17px;padding:8px;cursor:pointer;touch-action:manipulation;color:var(--text)}
+.match .tile.sel{border-color:var(--blau);background:#e8eef8}
+.match .tile.done{opacity:.35;pointer-events:none;background:#dcf7e6;border-color:var(--ok)}
+.match .tile.bad{border-color:var(--rot);background:#ffe8ec}
+.fb{border-radius:18px;padding:12px 14px;margin-top:12px}.fb.ok{background:#dcf7e6;border:3px solid var(--ok)}.fb.no{background:#fde4dc;border:3px solid var(--rot)}.fb.almost{background:#fff3d6;border:3px solid var(--warn)}
+.fb .t{font-size:22px;font-weight:800}.ex{font-style:italic;margin-top:6px;color:var(--muted)}
+.hint{background:#fff3d6;border-radius:14px;padding:10px 12px;font-weight:700;margin:8px 0}
+.small{font-size:15px;color:var(--muted)}.center{text-align:center}.stars{font-size:44px;text-align:center;letter-spacing:4px}
+.stat{background:#f1f4f8;border-radius:14px;padding:10px;text-align:center}.stat b{display:block;font-size:26px;color:var(--rot)}
+.prog{margin:6px 0}.prog .line{display:flex;justify-content:space-between;font-size:15px;margin-bottom:2px}
+.prog .track{height:10px;background:#e5ebf2;border-radius:6px;overflow:hidden}.prog .fill{height:100%;background:var(--ok)}
+.wronglist{list-style:none;padding:0;margin:8px 0}.wronglist li{padding:10px;border-bottom:1px solid #e5ebf2;font-size:17px}
+.speak{min-width:48px;min-height:48px;border:none;border-radius:12px;background:#e8eef8;color:var(--blau);font-size:22px;cursor:pointer;margin-left:8px;vertical-align:middle}
+#update{display:none;position:fixed;left:8px;right:8px;bottom:calc(env(safe-area-inset-bottom) + 8px);z-index:70;background:#012169;color:#fff;border-radius:16px;padding:12px 14px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+#update button{margin-top:8px;background:#fff;color:var(--blau);border:none;border-radius:12px;min-height:44px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer}
+#err{display:none;position:fixed;left:8px;right:8px;top:calc(env(safe-area-inset-top) + 8px);z-index:60;background:#fff3d6;border:2px solid var(--warn);border-radius:14px;padding:10px 12px;font-size:16px}
+#dlg{position:fixed;inset:0;background:rgba(20,30,50,.55);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+#dlg.on{display:flex}#dlg .box{background:#fff;border-radius:22px;padding:20px;max-width:420px;width:100%;text-align:center;font-weight:700;font-size:20px}
+@media (min-width:700px){body{font-size:22px}.wrap{max-width:900px}h1{font-size:36px}.prompt{font-size:42px}.opt{min-height:80px;font-size:28px}.btn{min-height:64px;font-size:24px}
+ .unit{min-height:110px}.unit .n{font-size:36px}.ansrow input{min-height:68px;font-size:28px}.mic{min-width:68px;min-height:68px;font-size:30px}
+ .cardflip{height:280px}.cardflip .face{font-size:40px}.match .tile{min-height:80px;font-size:22px}.seg button{min-height:64px;font-size:19px}}
+@media (min-width:1100px){.wrap{max-width:1000px}.units{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div id="err" role="status"></div>
+<div id="update"><div>🆕 Neue Version verfügbar.</div><button type="button" id="b-upd">Jetzt aktualisieren</button></div>
+<div id="dlg" role="dialog" aria-modal="true"><div class="box"><p id="dlg-t"></p><button class="btn" id="dlg-yes">Ja</button><button class="btn grau" id="dlg-no">Nein</button></div></div>
+
+<div class="wrap">
+<section id="s-home" class="screen on">
+ <h1>🇬🇧 Englisch-Vokabelspiel</h1>
+ <p class="sub">Go Ahead 6 · offline üben</p>
+ <div class="card">
+  <span class="lab">Units auswählen</span>
+  <div class="units" id="units"></div>
+  <button type="button" class="btn grau klein" id="b-all">Alle Units</button>
+  <div id="prog-home"></div>
+ </div>
+ <div class="card">
+  <span class="lab">Richtung</span>
+  <div class="seg" id="dir">
+   <button type="button" data-v="en2de" class="on">🇬🇧 → 🇩🇪</button>
+   <button type="button" data-v="de2en">🇩🇪 → 🇬🇧</button>
+   <button type="button" data-v="mixed">Gemischt</button>
+  </div>
+  <span class="lab">Spielmodus</span>
+  <div class="seg vier" id="mode">
+   <button type="button" data-v="mc" class="on">🔤 Auswahl</button>
+   <button type="button" data-v="type">⌨️ Tippen</button>
+   <button type="button" data-v="speak">🎤 Sprechen</button>
+   <button type="button" data-v="cards">🃏 Karten</button>
+   <button type="button" data-v="match">🔗 Zuordnen</button>
+  </div>
+  <span class="lab">Rundenlänge</span>
+  <div class="seg" id="len">
+   <button type="button" data-v="10" class="on">10 Wörter</button>
+   <button type="button" data-v="20">20 Wörter</button>
+   <button type="button" data-v="all">Alle</button>
+  </div>
+  <button type="button" class="btn" id="b-start">🚀 Los geht's</button>
+  <p class="small" id="speech-info"></p>
+ </div>
+</section>
+
+<section id="s-game" class="screen">
+ <div class="top"><span class="h" id="t-h"></span><span class="s" id="t-s"></span><span class="p" id="t-p"></span></div>
+ <div class="bar"><i id="t-bar"></i></div>
+ <div class="card" id="qc">
+  <div class="qh"><span id="q-l"></span><span id="q-n"></span></div>
+  <div class="dir" id="q-dir"></div>
+  <div class="prompt" id="q-p"><span id="q-word"></span><button type="button" class="speak" id="b-tts" title="Anhören" hidden>🔊</button></div>
+  <div id="q-a"></div>
+  <div id="q-m"></div>
+  <div id="q-f"></div>
+ </div>
+ <button type="button" class="btn grau klein" id="b-quit">⏹ Zurück</button>
+</section>
+
+<section id="s-end" class="screen">
+ <h1 id="e-t"></h1>
+ <div class="card">
+  <div class="stars" id="e-s"></div>
+  <p class="center" id="e-x"></p>
+  <div class="row2"><div class="stat">Richtig<b id="e-ok"></b></div><div class="stat">Punkte<b id="e-p"></b></div></div>
+  <div id="e-wrong"></div>
+  <button type="button" class="btn warn" id="b-retry" hidden>🔁 Falsche Wörter üben</button>
+  <button type="button" class="btn" id="b-again">🔁 Nochmal (gleiche Einstellungen)</button>
+  <button type="button" class="btn grau klein" id="b-home">Zur Übersicht</button>
+ </div>
+</section>
+</div>
+
+<script src="src/logic.js"></script>
+<script>
+(function () {
+"use strict";
+var PRAISE = ["Super", "Klasse", "Stark", "Prima", "Toll", "Spitze", "Genau", "Bravo"];
+var COMFORT = ["Nicht schlimm – merke es dir:", "Fast! Schau nochmal:", "Kein Problem, daraus lernst du:"];
+var LIVES = 3, ROUND_DEFAULT = 10;
+var S = { units: [], dir: "en2de", mode: "mc", len: 10, round: [], i: 0, lives: LIVES, pts: 0, streak: 0, ok: 0, wrong: [], answered: false, matchPairs: null, matchSel: null, practiceWrong: null };
+window.__vok = { S: S };
+var DATA = null, WORDS = [], UNITS = [];
+var store = {
+  get: function (k, d) { try { var v = localStorage.getItem("vok_" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set: function (k, v) { try { localStorage.setItem("vok_" + k, JSON.stringify(v)); } catch (e) {} }
+};
+function $(id) { return document.getElementById(id); }
+function rnd(a) { return a[Math.floor(Math.random() * a.length)]; }
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+function show(id) { var a = document.querySelectorAll(".screen"); for (var i = 0; i < a.length; i++) a[i].classList.remove("on"); $(id).classList.add("on"); window.scrollTo(0, 0); }
+function stars(n) { var s = ""; for (var i = 0; i < 3; i++) s += i < n ? "⭐" : "☆"; return s; }
+function ask(text, yes) {
+  $("dlg-t").textContent = text; $("dlg").classList.add("on");
+  $("dlg-yes").onclick = function () { $("dlg").classList.remove("on"); yes(); };
+  $("dlg-no").onclick = function () { $("dlg").classList.remove("on"); };
+}
+function hasSpeechRec() {
+  return !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+}
+function hasTTS() { return !!(window.speechSynthesis && window.SpeechSynthesisUtterance); }
+
+function wordProg(id) {
+  var p = store.get("words", {}); return p[id] || { known: 0, wrong: 0, seen: 0 };
+}
+function saveWord(id, ok) {
+  var p = store.get("words", {}); var w = p[id] || { known: 0, wrong: 0, seen: 0 };
+  w.seen++; if (ok) w.known++; else w.wrong++; p[id] = w; store.set("words", p);
+}
+function unitStats(uid) {
+  var ws = WORDS.filter(function (w) { return w.unit === uid; });
+  var known = 0; ws.forEach(function (w) { if (wordProg(w.id).known > wordProg(w.id).wrong) known++; });
+  return { total: ws.length, known: known };
+}
+
+function buildHome() {
+  var h = "";
+  UNITS.forEach(function (u) {
+    var st = unitStats(u.id); var on = S.units.indexOf(u.id) >= 0 ? " on" : "";
+    h += '<button type="button" class="unit' + on + '" data-u="' + esc(u.id) + '"><span class="n">' + st.total + '</span>' + esc(u.name) +
+      '<small>' + st.known + ' gut gelernt</small><div class="prog"><div class="track"><div class="fill" style="width:' + (st.total ? Math.round(100 * st.known / st.total) : 0) + '%"></div></div></div></button>';
+  });
+  $("units").innerHTML = h;
+  var bs = $("units").querySelectorAll(".unit");
+  for (var i = 0; i < bs.length; i++) bs[i].onclick = function () {
+    var u = this.getAttribute("data-u"), ix = S.units.indexOf(u);
+    if (ix >= 0) S.units.splice(ix, 1); else S.units.push(u);
+    if (!S.units.length) S.units = [UNITS[0].id];
+    store.set("units", S.units); buildHome();
+  };
+  var info = "";
+  if (hasSpeechRec()) info = "🎤 Spracherkennung ist in diesem Browser verfügbar (braucht Internet und Mikrofon-Erlaubnis).";
+  else info = "🎤 Spracherkennung fehlt hier. Tipp auf dem iPhone: Im Eingabefeld auf das Mikrofon der Tastatur tippen (Diktierfunktion) – das geht in Safari und oft auch woanders.";
+  $("speech-info").textContent = info;
+}
+$("b-all").onclick = function () { S.units = UNITS.map(function (u) { return u.id; }); store.set("units", S.units); buildHome(); };
+
+function bindSeg(id, key) {
+  var box = $(id), bs = box.querySelectorAll("button");
+  for (var i = 0; i < bs.length; i++) bs[i].onclick = function () {
+    for (var j = 0; j < bs.length; j++) bs[j].classList.remove("on");
+    this.classList.add("on"); S[key] = this.getAttribute("data-v"); store.set(key, S[key]);
+  };
+  var cur = store.get(key, S[key]); S[key] = cur;
+  for (var k = 0; k < bs.length; k++) { bs[k].classList.toggle("on", bs[k].getAttribute("data-v") === cur); }
+}
+bindSeg("dir", "dir"); bindSeg("mode", "mode"); bindSeg("len", "len");
+
+function startRound(forceWords) {
+  if (!S.units.length) S.units = [UNITS[0].id];
+  var count = S.len === "all" ? 9999 : +S.len;
+  var pool = WORDS, unitIds = S.units.slice();
+  if (forceWords && forceWords.length) {
+    var ids = {}; forceWords.forEach(function (w) { ids[w.id] = 1; });
+    pool = WORDS.filter(function (w) { return ids[w.id]; });
+    unitIds = []; pool.forEach(function (w) { if (unitIds.indexOf(w.unit) < 0) unitIds.push(w.unit); });
+    count = pool.length;
+  }
+  var buildMode = (S.mode === "speak" || S.mode === "match") ? (S.mode === "match" ? "mc" : "type") : S.mode;
+  S.round = Vok.buildRound(pool, unitIds, S.dir, buildMode, count);
+  S.round.forEach(function (r) {
+    if (S.mode === "speak") { r.mode = "type"; r.speakMode = true; }
+    else if (S.mode === "match") r.mode = "match";
+  });
+  if (!S.round.length) return;
+  S.i = 0; S.lives = LIVES; S.pts = 0; S.streak = 0; S.ok = 0; S.wrong = []; S.answered = false;
+  if (S.mode === "match") { startMatch(); return; }
+  nextQ();
+}
+$("b-start").onclick = function () { S.practiceWrong = null; startRound(); };
+
+function mult() { return S.streak >= 5 ? 3 : S.streak >= 3 ? 2 : 1; }
+function hud() {
+  var h = ""; for (var i = 0; i < LIVES; i++) h += i < S.lives ? "❤️" : "🤍";
+  $("t-h").textContent = h; $("t-p").textContent = S.pts + " ⭐";
+  $("t-s").textContent = S.streak >= 2 ? "🔥" + S.streak + (mult() > 1 ? " ×" + mult() : "") : "";
+  $("t-bar").style.width = (100 * S.i / S.round.length) + "%";
+}
+function speak(text, lang) {
+  if (!hasTTS()) return;
+  try {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = lang || "en-GB"; u.rate = 0.92;
+    window.speechSynthesis.speak(u);
+  } catch (e) {}
+}
+function setupTts(text, lang) {
+  var b = $("b-tts");
+  if (!hasTTS() || !text) { b.hidden = true; return; }
+  b.hidden = false;
+  b.onclick = function () { speak(text, lang); };
+}
+
+function nextQ() {
+  if (S.i >= S.round.length || S.lives <= 0) return endRound();
+  var r = S.round[S.i]; S.answered = false;
+  $("q-l").textContent = r.word.unit + (r.speakMode ? " · Sprechen" : "");
+  $("q-n").textContent = "Wort " + (S.i + 1) + " / " + S.round.length;
+  $("q-dir").textContent = r.dir === "en2de" ? "Englisch → Deutsch" : "Deutsch → Englisch";
+  $("q-word").textContent = r.prompt;
+  setupTts(r.askSide === "en" ? r.word.en : r.word.de, r.askSide === "en" ? "en-GB" : "de-DE");
+  $("q-m").innerHTML = ""; $("q-f").innerHTML = "";
+  buildInput(r); hud(); show("s-game");
+}
+
+function buildInput(r) {
+  var h = "";
+  if (r.mode === "mc") {
+    h = '<div class="opts">';
+    r.opts.forEach(function (o, i) { h += '<button type="button" class="opt" data-i="' + i + '">' + esc(o) + "</button>"; });
+    h += "</div>";
+    $("q-a").innerHTML = h;
+    var bs = $("q-a").querySelectorAll(".opt");
+    for (var i = 0; i < bs.length; i++) bs[i].onclick = function () { submit(Vok.checkMc(+this.getAttribute("data-i"), r.correct), r, this.textContent); };
+  } else if (r.mode === "type" || r.speakMode) {
+    h = '<div class="ansrow"><input id="inp" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="Antwort" aria-label="Antwort">';
+    h += '<button type="button" class="mic" id="b-mic" title="Einsprechen">🎤</button></div>';
+    h += '<div class="heard" id="heard"></div>';
+    if (r.speakMode) h += '<p class="small center">Sprich die Übersetzung. Du kannst auch tippen oder das Mikrofon der Tastatur nutzen.</p>';
+    else h += '<p class="small center">Tipp: Auf dem iPhone kannst du auch das Mikrofon der Tastatur nutzen.</p>';
+    h += '<button type="button" class="btn" id="b-ok">Prüfen ✓</button>';
+    $("q-a").innerHTML = h;
+    $("b-ok").onclick = function () { doTypeCheck(r); };
+    $("inp").onkeydown = function (e) { if (e.key === "Enter") { e.preventDefault(); doTypeCheck(r); } };
+    setupMic(r);
+    if (r.speakMode) setTimeout(function () { tryStartListen(r); }, 400);
+  } else if (r.mode === "cards") {
+    h = '<div class="cardflip" id="flip" role="button" tabindex="0" aria-label="Karte umdrehen"><div class="inner">';
+    h += '<div class="face front">' + esc(r.prompt) + '</div>';
+    h += '<div class="face back">' + esc(r.answer) + '</div></div></div>';
+    h += '<p class="small center">Tippe die Karte an, um sie umzudrehen.</p>';
+    h += '<div class="row2"><button type="button" class="btn gruen" id="b-knew">✅ Gewusst</button><button type="button" class="btn" id="b-dunno">❌ Nicht gewusst</button></div>';
+    $("q-a").innerHTML = h;
+    $("flip").onclick = function () { this.classList.toggle("show"); };
+    $("b-knew").onclick = function () { submit({ res: "correct" }, r, r.answer); };
+    $("b-dunno").onclick = function () { submit({ res: "wrong" }, r, ""); };
+  }
+}
+
+function doTypeCheck(r) {
+  var val = $("inp").value;
+  var res; try { res = Vok.checkTyped(val, r.answer, r.ansSide); } catch (e) { res = { res: "wrong" }; }
+  submit(res, r, val);
+}
+
+function setupMic(r) {
+  var b = $("b-mic");
+  if (!hasSpeechRec()) {
+    b.title = "Spracherkennung nicht verfügbar – nutze das Mikrofon der Tastatur";
+    b.onclick = function () {
+      $("heard").textContent = "Spracherkennung fehlt hier. Tippe im Eingabefeld auf das Mikrofon-Symbol der iOS-Tastatur (Diktierfunktion).";
+      try { $("inp").focus(); } catch (e) {}
+    };
+    return;
+  }
+  b.onclick = function () { tryStartListen(r); };
+}
+function tryStartListen(r) {
+  var Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Rec) {
+    $("heard").textContent = "Spracherkennung nicht verfügbar. Nutze das Mikrofon der Tastatur.";
+    return;
+  }
+  var b = $("b-mic"), heard = $("heard");
+  if (b.classList.contains("listening")) return;
+  var rec = new Rec();
+  rec.lang = r.ansSide === "en" ? "en-GB" : "de-DE";
+  rec.interimResults = false; rec.maxAlternatives = 5; rec.continuous = false;
+  b.classList.add("listening"); heard.textContent = "Ich höre zu …";
+  rec.onresult = function (ev) {
+    b.classList.remove("listening");
+    var alts = [];
+    try {
+      var res = ev.results[0];
+      for (var i = 0; i < res.length; i++) alts.push(res[i].transcript);
+    } catch (e) {}
+    if (!alts.length) { heard.textContent = "Nichts erkannt. Versuch's nochmal oder tippe."; return; }
+    heard.textContent = "Erkannt: „" + alts[0] + "“" + (alts.length > 1 ? " (und " + (alts.length - 1) + " Alternativen)" : "");
+    $("inp").value = alts[0];
+    // prüfe jede Alternative
+    var best = null;
+    for (var k = 0; k < alts.length; k++) {
+      var c; try { c = Vok.checkTyped(alts[k], r.answer, r.ansSide); } catch (e) { c = { res: "wrong" }; }
+      if (c.res === "correct") { best = { res: "correct", heard: alts[k] }; break; }
+      if (c.res === "almost" && (!best || best.res === "wrong")) best = { res: "almost", msg: c.msg, expect: c.expect, heard: alts[k] };
+      if (!best) best = { res: "wrong", heard: alts[k] };
+    }
+    submit(best, r, best.heard || alts[0]);
+  };
+  rec.onerror = function (ev) {
+    b.classList.remove("listening");
+    var msg = "Spracherkennung: ";
+    if (ev.error === "not-allowed") msg = "Mikrofon-Erlaubnis fehlt. Erlaube das Mikrofon oder nutze das Diktier-Symbol der Tastatur.";
+    else if (ev.error === "network") msg = "Spracherkennung braucht Internet. Offline: tippe oder nutze das Mikrofon der Tastatur.";
+    else if (ev.error === "no-speech") msg = "Nichts gehört. Nochmal tippen auf 🎤 oder tippe die Antwort.";
+    else if (ev.error === "aborted") msg = "Abgebrochen.";
+    else msg += (ev.error || "unbekannt") + ". Als Ausweg: Diktier-Symbol der Tastatur nutzen.";
+    heard.textContent = msg;
+  };
+  rec.onend = function () { b.classList.remove("listening"); };
+  try { rec.start(); } catch (e) {
+    b.classList.remove("listening");
+    heard.textContent = "Konnte Spracherkennung nicht starten. Nutze das Mikrofon der Tastatur.";
+  }
+}
+
+function submit(res, r, given) {
+  if (S.answered) return;
+  if (res.res === "hint") {
+    $("q-m").innerHTML = '<div class="hint">💡 ' + esc(res.msg) + "</div>";
+    return;
+  }
+  S.answered = true;
+  var ok = res.res === "correct";
+  var almost = res.res === "almost";
+  if (ok) { S.streak++; S.ok++; var g = Math.round(10 * mult()); S.pts += g; saveWord(r.word.id, true); }
+  else {
+    S.streak = 0; if (!almost) S.lives--;
+    if (almost) { S.ok += 0.5; S.pts += 5; }
+    S.wrong.push(r.word); saveWord(r.word.id, false);
+  }
+  var cls = ok ? "ok" : (almost ? "almost" : "no");
+  var title = ok ? ("✅ " + rnd(PRAISE) + "! +" + Math.round(10 * mult()) + " ⭐") :
+    (almost ? ("🟡 " + (res.msg || "Fast richtig!")) : ("❌ " + rnd(COMFORT)));
+  var body = "";
+  if (!ok) body += "<div><b>Richtig:</b> " + esc(r.answer) + "</div>";
+  if (given) body += "<div class='small'>Deine Antwort: " + esc(given) + "</div>";
+  if (r.word.ex) body += '<div class="ex">💬 ' + esc(r.word.ex) + ' <button type="button" class="speak" id="b-ex" title="Satz anhören">🔊</button></div>';
+  var last = S.lives <= 0 || S.i + 1 >= S.round.length;
+  body += '<button type="button" class="btn" id="b-w">' + (S.lives <= 0 ? "Keine Herzen mehr – Auswertung" : last ? "Zur Auswertung 🏁" : "Weiter ➜") + "</button>";
+  $("q-f").innerHTML = '<div class="fb ' + cls + '"><div class="t">' + title + "</div>" + body + "</div>";
+  if (r.word.ex && hasTTS() && $("b-ex")) $("b-ex").onclick = function () { speak(r.word.ex, "en-GB"); };
+  var dis = $("q-a").querySelectorAll("button,input"); for (var i = 0; i < dis.length; i++) dis[i].disabled = true;
+  hud();
+  $("b-w").onclick = function () {
+    if (S.lives <= 0 || S.i + 1 >= S.round.length) endRound();
+    else { S.i++; nextQ(); }
+  };
+  setTimeout(function () { var el = $("q-f"); if (el && el.scrollIntoView) el.scrollIntoView({ behavior: "smooth", block: "nearest" }); }, 40);
+}
+
+/* ---- Zuordnen ---- */
+function startMatch() {
+  var items = S.round.slice(0, Math.min(8, S.round.length));
+  S.round = items; // length for progress
+  var left = Vok.shuffle(items.map(function (r, i) { return { i: i, text: r.prompt, side: "L" }; }));
+  var right = Vok.shuffle(items.map(function (r, i) { return { i: i, text: r.answer, side: "R" }; }));
+  S.matchPairs = items; S.matchSel = null; S.i = 0; S.ok = 0; S.answered = false;
+  $("q-l").textContent = "Zuordnen"; $("q-n").textContent = items.length + " Paare";
+  $("q-dir").textContent = S.dir === "en2de" ? "Englisch ↔ Deutsch" : "Deutsch ↔ Englisch";
+  $("q-word").textContent = "Verbinde die Paare"; $("b-tts").hidden = true;
+  $("q-m").innerHTML = ""; $("q-f").innerHTML = "";
+  var h = '<div class="match" id="match">';
+  for (var k = 0; k < items.length; k++) {
+    h += '<button type="button" class="tile" data-side="L" data-i="' + left[k].i + '">' + esc(left[k].text) + "</button>";
+    h += '<button type="button" class="tile" data-side="R" data-i="' + right[k].i + '">' + esc(right[k].text) + "</button>";
+  }
+  h += "</div><p class=\"small center\">Tippe links ein Wort, dann rechts die passende Übersetzung.</p>";
+  $("q-a").innerHTML = h; hud(); show("s-game");
+  var done = 0;
+  $("match").onclick = function (ev) {
+    var t = ev.target; if (!t.classList.contains("tile") || t.classList.contains("done")) return;
+    if (!S.matchSel) {
+      S.matchSel = t; t.classList.add("sel"); return;
+    }
+    if (S.matchSel === t) { t.classList.remove("sel"); S.matchSel = null; return; }
+    if (S.matchSel.getAttribute("data-side") === t.getAttribute("data-side")) {
+      S.matchSel.classList.remove("sel"); S.matchSel = t; t.classList.add("sel"); return;
+    }
+    var a = S.matchSel, b = t;
+    a.classList.remove("sel");
+    if (a.getAttribute("data-i") === b.getAttribute("data-i")) {
+      a.classList.add("done"); b.classList.add("done"); done++; S.ok++; S.pts += 10; S.streak++;
+      saveWord(S.matchPairs[+a.getAttribute("data-i")].word.id, true);
+      S.i = done; hud();
+      if (done >= items.length) {
+        $("q-f").innerHTML = '<div class="fb ok"><div class="t">✅ Alle Paare gefunden!</div><button type="button" class="btn" id="b-w">Zur Auswertung 🏁</button></div>';
+        $("b-w").onclick = endRound;
+      }
+    } else {
+      a.classList.add("bad"); b.classList.add("bad"); S.streak = 0; S.lives--;
+      saveWord(S.matchPairs[+a.getAttribute("data-i")].word.id, false);
+      S.wrong.push(S.matchPairs[+a.getAttribute("data-i")].word);
+      hud();
+      setTimeout(function () { a.classList.remove("bad"); b.classList.remove("bad"); }, 450);
+      if (S.lives <= 0) {
+        $("q-f").innerHTML = '<div class="fb no"><div class="t">💔 Keine Herzen mehr</div><button type="button" class="btn" id="b-w">Zur Auswertung</button></div>';
+        $("b-w").onclick = endRound;
+      }
+    }
+    S.matchSel = null;
+  };
+}
+
+function endRound() {
+  var st = S.lives <= 0 ? 0 : Math.max(1, Math.min(3, S.lives));
+  if (S.mode === "match" && S.lives > 0) st = 3;
+  $("e-t").textContent = S.lives <= 0 ? "💔 Runde vorbei" : st === 3 ? "🎉 Super gemacht!" : "🎉 Geschafft!";
+  $("e-s").textContent = stars(st);
+  $("e-ok").textContent = (S.ok % 1 ? S.ok.toFixed(1) : S.ok) + " / " + S.round.length;
+  $("e-p").textContent = S.pts;
+  $("e-x").textContent = S.lives <= 0 ? "Übung macht den Meister – gleich nochmal!" : "Längste Serie: 🔥 " + S.streak;
+  var uniq = []; var seen = {};
+  S.wrong.forEach(function (w) { if (!seen[w.id]) { seen[w.id] = 1; uniq.push(w); } });
+  if (uniq.length) {
+    var html = "<b>Diese Wörter nochmal anschauen:</b><ul class='wronglist'>";
+    uniq.forEach(function (w) { html += "<li><b>" + esc(w.en) + "</b> – " + esc(w.de) + (w.ex ? "<br><span class='small'>" + esc(w.ex) + "</span>" : "") + "</li>"; });
+    html += "</ul>"; $("e-wrong").innerHTML = html;
+    $("b-retry").hidden = false;
+    $("b-retry").onclick = function () { S.practiceWrong = uniq; startRound(uniq); };
+  } else { $("e-wrong").innerHTML = "<p class='center'>Alle Wörter richtig – stark! 🌟</p>"; $("b-retry").hidden = true; }
+  store.set("last", { mode: S.mode, dir: S.dir, units: S.units });
+  show("s-end");
+}
+$("b-again").onclick = function () { startRound(S.practiceWrong); };
+$("b-home").onclick = function () { buildHome(); show("s-home"); };
+$("b-quit").onclick = function () { ask("Runde wirklich beenden?", function () { buildHome(); show("s-home"); }); };
+
+// Fehlerbanner (ohne cross-origin Script error)
+(function () {
+  var shown = 0;
+  window.addEventListener("error", function (e) {
+    var m = (e && e.message) || "";
+    if (!m || /^Script error\.?$/i.test(m)) return;
+    if (e.filename && location.protocol !== "file:" && e.filename.indexOf(location.origin) !== 0) return;
+    if (shown++ > 2) return;
+    var b = $("err"); if (!b) return;
+    b.textContent = "Hoppla, da ist etwas schiefgelaufen. Lade die Seite neu, falls etwas nicht klappt.";
+    b.style.display = "block"; setTimeout(function () { b.style.display = "none"; }, 5000);
+  });
+})();
+
+function boot(data) {
+  DATA = Vok.loadVocab(data); WORDS = DATA.words; UNITS = DATA.units;
+  S.units = store.get("units", UNITS.map(function (u) { return u.id; }));
+  // nur existierende Units behalten
+  S.units = S.units.filter(function (u) { return UNITS.some(function (x) { return x.id === u; }); });
+  if (!S.units.length) S.units = [UNITS[0].id];
+  buildHome(); show("s-home");
+}
+
+fetch("vocab.json").then(function (r) { return r.json(); }).then(boot).catch(function () {
+  $("err").style.display = "block"; $("err").textContent = "Vokabelliste konnte nicht geladen werden.";
+});
+
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").then(function (reg) {
+      function hint() { $("update").style.display = "block"; }
+      if (reg.waiting) hint();
+      reg.addEventListener("updatefound", function () {
+        var nw = reg.installing; if (!nw) return;
+        nw.addEventListener("statechange", function () {
+          if (nw.state === "installed" && navigator.serviceWorker.controller) hint();
+        });
+      });
+      $("b-upd").onclick = function () {
+        if (reg.waiting) reg.waiting.postMessage({ type: "SKIP_WAITING" });
+        window.location.reload();
+      };
+      var refreshing = false;
+      navigator.serviceWorker.addEventListener("controllerchange", function () {
+        if (refreshing) return; refreshing = true; /* kein Auto-Reload – Nutzer tippt den Button */
+      });
+    }).catch(function () {});
+  });
+}
+})();
+</script>
+</body>
+</html>

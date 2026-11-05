@@ -1,0 +1,498 @@
+{
+ "title": "Go Ahead 6 – Vokabeln",
+ "book": "Go Ahead 6",
+ "units": [
+  {
+   "id": "Unit 1",
+   "name": "Unit 1",
+   "words": [
+    {
+     "id": 0,
+     "en": "media",
+     "de": "Medien",
+     "ex": "The media show news every day."
+    },
+    {
+     "id": 1,
+     "en": "screen",
+     "de": "Bildschirm",
+     "ex": "Look at the screen, please."
+    },
+    {
+     "id": 2,
+     "en": "(to) download",
+     "de": "herunterladen",
+     "ex": "I download a song. (to download)"
+    },
+    {
+     "id": 3,
+     "en": "(to) upload",
+     "de": "hochladen",
+     "ex": "She uploads a photo. (to upload)"
+    },
+    {
+     "id": 4,
+     "en": "(to) phone",
+     "de": "anrufen, telefonieren",
+     "ex": "I phone my friend. (to phone)"
+    },
+    {
+     "id": 5,
+     "en": "phone",
+     "de": "Telefon",
+     "ex": "The phone is on the table."
+    },
+    {
+     "id": 6,
+     "en": "camera",
+     "de": "Fotoapparat, Kamera",
+     "ex": "My camera is new."
+    },
+    {
+     "id": 7,
+     "en": "games console",
+     "de": "Spielekonsole",
+     "ex": "He plays on his games console."
+    },
+    {
+     "id": 8,
+     "en": "on TV",
+     "de": "im Fernsehen",
+     "ex": "The film is on TV tonight."
+    },
+    {
+     "id": 9,
+     "en": "(to) be on",
+     "de": "gezeigt werden, stattfinden",
+     "ex": "The show is on at 7. (to be on)"
+    },
+    {
+     "id": 10,
+     "en": "news",
+     "de": "Nachrichten",
+     "ex": "That's good news!"
+    },
+    {
+     "id": 11,
+     "en": "gamer",
+     "de": "Spieler, Gamer",
+     "ex": "The gamer likes computer games."
+    },
+    {
+     "id": 12,
+     "en": "exciting",
+     "de": "aufregend",
+     "ex": "The game is exciting."
+    },
+    {
+     "id": 13,
+     "en": "(to) test",
+     "de": "testen",
+     "ex": "We test the game. (to test)"
+    },
+    {
+     "id": 14,
+     "en": "test",
+     "de": "Klassenarbeit, Test",
+     "ex": "The test is on Friday."
+    },
+    {
+     "id": 15,
+     "en": "company",
+     "de": "Firma",
+     "ex": "The company makes games."
+    },
+    {
+     "id": 16,
+     "en": "programme",
+     "de": "(Fernseh-)Sendung",
+     "ex": "This programme is fun."
+    },
+    {
+     "id": 17,
+     "en": "detective",
+     "de": "Detektiv/in",
+     "ex": "The detective looks for clues."
+    },
+    {
+     "id": 18,
+     "en": "detective series",
+     "de": "Krimiserie",
+     "ex": "I watch a detective series."
+    },
+    {
+     "id": 19,
+     "en": "documentary",
+     "de": "Dokumentarfilm",
+     "ex": "The documentary is about animals."
+    },
+    {
+     "id": 20,
+     "en": "reality",
+     "de": "Realität, Wirklichkeit",
+     "ex": "In reality, it is different."
+    },
+    {
+     "id": 21,
+     "en": "presentation",
+     "de": "Referat, Präsentation",
+     "ex": "I give a presentation today."
+    },
+    {
+     "id": 22,
+     "en": "writer",
+     "de": "Autor/in, Verfasser/in",
+     "ex": "The writer writes a story."
+    },
+    {
+     "id": 23,
+     "en": "danger *",
+     "de": "Gefahr *",
+     "ex": "There is danger on the rocks."
+    },
+    {
+     "id": 24,
+     "en": "maybe",
+     "de": "vielleicht",
+     "ex": "Maybe we go home."
+    },
+    {
+     "id": 25,
+     "en": "experiment",
+     "de": "Experiment",
+     "ex": "The experiment is exciting."
+    },
+    {
+     "id": 26,
+     "en": "sand",
+     "de": "Sand",
+     "ex": "The sand is warm."
+    },
+    {
+     "id": 27,
+     "en": "prove *",
+     "de": "nachweisen, beweisen *",
+     "ex": "Can you prove it? (to prove)"
+    },
+    {
+     "id": 28,
+     "en": "wood *",
+     "de": "Holz, Wald *",
+     "ex": "The table is made of wood."
+    },
+    {
+     "id": 29,
+     "en": "drop *",
+     "de": "fallen lassen *",
+     "ex": "Don't drop the bottle! (to drop)"
+    },
+    {
+     "id": 30,
+     "en": "rock",
+     "de": "Felsen",
+     "ex": "The rock is big."
+    },
+    {
+     "id": 31,
+     "en": "head",
+     "de": "Kopf",
+     "ex": "My head hurts."
+    },
+    {
+     "id": 32,
+     "en": "if",
+     "de": "wenn, falls",
+     "ex": "If it rains, we stay home."
+    },
+    {
+     "id": 33,
+     "en": "what if ...?",
+     "de": "was wäre, wenn ...?",
+     "ex": "What if we are late?"
+    },
+    {
+     "id": 34,
+     "en": "(to) sleep",
+     "de": "schlafen",
+     "ex": "I sleep eight hours. (to sleep)"
+    },
+    {
+     "id": 35,
+     "en": "sleep",
+     "de": "Schlaf",
+     "ex": "Good sleep is important."
+    },
+    {
+     "id": 36,
+     "en": "(to) work",
+     "de": "arbeiten",
+     "ex": "She works at school. (to work)"
+    },
+    {
+     "id": 37,
+     "en": "work",
+     "de": "Arbeit",
+     "ex": "The work is easy."
+    },
+    {
+     "id": 38,
+     "en": "(to) give a presentation",
+     "de": "ein Referat halten",
+     "ex": "She gives a presentation. (to give a presentation)"
+    },
+    {
+     "id": 39,
+     "en": "That's good news.",
+     "de": "Das sind gute Nachrichten.",
+     "ex": "That's good news, thank you!"
+    }
+   ]
+  },
+  {
+   "id": "Unit 2",
+   "name": "Unit 2",
+   "words": [
+    {
+     "id": 40,
+     "en": "waterfall",
+     "de": "Wasserfall",
+     "ex": "The waterfall is loud."
+    },
+    {
+     "id": 41,
+     "en": "mountain",
+     "de": "Berg",
+     "ex": "The mountain is high."
+    },
+    {
+     "id": 42,
+     "en": "lake",
+     "de": "(Binnen-)See",
+     "ex": "We swim in the lake."
+    },
+    {
+     "id": 43,
+     "en": "coast",
+     "de": "Küste",
+     "ex": "The coast is beautiful."
+    },
+    {
+     "id": 44,
+     "en": "field",
+     "de": "Feld, Weide",
+     "ex": "The ponies are on the field."
+    },
+    {
+     "id": 45,
+     "en": "grass",
+     "de": "Gras, Rasen",
+     "ex": "The grass is green."
+    },
+    {
+     "id": 46,
+     "en": "postcard",
+     "de": "Postkarte",
+     "ex": "I write a postcard."
+    },
+    {
+     "id": 47,
+     "en": "pony",
+     "de": "Pony",
+     "ex": "The pony is small and friendly."
+    },
+    {
+     "id": 48,
+     "en": "farm",
+     "de": "Bauernhof, Farm",
+     "ex": "Animals live on the farm."
+    },
+    {
+     "id": 49,
+     "en": "moor *",
+     "de": "Heide(land), Moor *",
+     "ex": "The moor is wet."
+    },
+    {
+     "id": 50,
+     "en": "hill",
+     "de": "Hügel",
+     "ex": "We walk up the hill."
+    },
+    {
+     "id": 51,
+     "en": "forest",
+     "de": "Wald",
+     "ex": "The forest is dark."
+    },
+    {
+     "id": 52,
+     "en": "bridge",
+     "de": "Brücke",
+     "ex": "We go over the bridge."
+    },
+    {
+     "id": 53,
+     "en": "river",
+     "de": "Fluss",
+     "ex": "The river is cold."
+    },
+    {
+     "id": 54,
+     "en": "(to) get (to) *",
+     "de": "gelangen, (hin)kommen nach *",
+     "ex": "How do I get to the lake? (to get to)"
+    },
+    {
+     "id": 55,
+     "en": "raft *",
+     "de": "Floß *",
+     "ex": "We sit on a raft."
+    },
+    {
+     "id": 56,
+     "en": "wetsuit *",
+     "de": "Taucheranzug, Neoprenanzug *",
+     "ex": "You need a wetsuit in cold water."
+    },
+    {
+     "id": 57,
+     "en": "swimming costume",
+     "de": "Badeanzug",
+     "ex": "Her swimming costume is blue."
+    },
+    {
+     "id": 58,
+     "en": "swimming trunks",
+     "de": "Badehose",
+     "ex": "His swimming trunks are red."
+    },
+    {
+     "id": 59,
+     "en": "towel",
+     "de": "Handtuch",
+     "ex": "The towel is wet."
+    },
+    {
+     "id": 60,
+     "en": "definitely",
+     "de": "auf jeden Fall, ganz bestimmt",
+     "ex": "I will definitely come."
+    },
+    {
+     "id": 61,
+     "en": "forget, forgot",
+     "de": "vergessen (forget - forgot)",
+     "ex": "Don't forget your boots! (to forget)"
+    },
+    {
+     "id": 62,
+     "en": "(to) hike",
+     "de": "wandern",
+     "ex": "We hike in the hills. (to hike)"
+    },
+    {
+     "id": 63,
+     "en": "hiking",
+     "de": "(das) Wandern",
+     "ex": "Hiking is fun."
+    },
+    {
+     "id": 64,
+     "en": "boot",
+     "de": "Stiefel (meist: boots)",
+     "ex": "My boots are wet."
+    },
+    {
+     "id": 65,
+     "en": "map",
+     "de": "Landkarte, Stadtplan",
+     "ex": "Look at the map."
+    },
+    {
+     "id": 66,
+     "en": "gate",
+     "de": "Tor, Gatter",
+     "ex": "Open the gate, please."
+    },
+    {
+     "id": 67,
+     "en": "tent",
+     "de": "Zelt",
+     "ex": "We sleep in a tent."
+    },
+    {
+     "id": 68,
+     "en": "fire",
+     "de": "Feuer",
+     "ex": "We sit by the fire."
+    },
+    {
+     "id": 69,
+     "en": "(to) turn left",
+     "de": "(nach) links abbiegen",
+     "ex": "Turn left here. (to turn left)"
+    },
+    {
+     "id": 70,
+     "en": "(to) turn right",
+     "de": "(nach) rechts abbiegen",
+     "ex": "Turn right at the bridge. (to turn right)"
+    },
+    {
+     "id": 71,
+     "en": "(to) turn around",
+     "de": "sich umdrehen",
+     "ex": "Turn around, please. (to turn around)"
+    },
+    {
+     "id": 72,
+     "en": "frog",
+     "de": "Frosch",
+     "ex": "The frog is green."
+    },
+    {
+     "id": 73,
+     "en": "leaflet",
+     "de": "Faltblatt, Informationsblatt",
+     "ex": "The leaflet has a map."
+    },
+    {
+     "id": 74,
+     "en": "ice",
+     "de": "Eis (gefrorenes Wasser)",
+     "ex": "The ice is cold."
+    },
+    {
+     "id": 75,
+     "en": "cold",
+     "de": "kalt",
+     "ex": "The water is cold."
+    },
+    {
+     "id": 76,
+     "en": "(to) have a cold",
+     "de": "erkaeltet sein",
+     "ex": "She has a cold. (to have a cold)"
+    },
+    {
+     "id": 77,
+     "en": "crazy",
+     "de": "verrückt",
+     "ex": "That's a crazy idea!"
+    },
+    {
+     "id": 78,
+     "en": "mine *",
+     "de": "meine/r/s (Besitz) *",
+     "ex": "This book is mine."
+    },
+    {
+     "id": 79,
+     "en": "you won't need ... *",
+     "de": "du wirst ... nicht brauchen *",
+     "ex": "You won't need a towel."
+    }
+   ]
+  }
+ ]
+}

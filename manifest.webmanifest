@@ -1,0 +1,31 @@
+{
+ "name": "Englisch-Vokabelspiel – Go Ahead 6",
+ "short_name": "Vokabeln",
+ "description": "Vokabelspiel zu Go Ahead 6 für die 6. Klasse Realschule",
+ "lang": "de",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#ffe8ec",
+ "theme_color": "#c8102e",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  },
+  {
+   "src": "apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  }
+ ]
+}
