@@ -1,22 +1,48 @@
 {
  "title": "Go Ahead 6 – Vokabeln",
- "book": "Go Ahead 6",
+ "book": "Go Ahead 6 (Realschule Bayern)",
+ "source_note": "Wortlisten nach Community-Listen zu Go Ahead 6 (Card2Brain); Abweichungen zum Buch möglich.",
  "units": [
   {
    "id": "Unit 1",
    "name": "Unit 1",
+   "subtitle": "Media time",
    "words": [
     {
-     "id": 0,
-     "en": "media",
-     "de": "Medien",
-     "ex": "The media show news every day."
+     "id": 80,
+     "en": "(to) answer",
+     "de": "(be)antworten"
     },
     {
-     "id": 1,
-     "en": "screen",
-     "de": "Bildschirm",
-     "ex": "Look at the screen, please."
+     "id": 9,
+     "en": "(to) be on",
+     "de": "gezeigt werden (Kino, Fernsehen), stattfinden",
+     "ex": "The show is on at 7. (to be on)"
+    },
+    {
+     "id": 81,
+     "en": "(to) build, built",
+     "de": "bauen (2 Formen)"
+    },
+    {
+     "id": 82,
+     "en": "(to) chat",
+     "de": "chatten, sich unterhalten"
+    },
+    {
+     "id": 83,
+     "en": "(to) chat (with)",
+     "de": "chatten (mit), sich unterhalten (mit)"
+    },
+    {
+     "id": 84,
+     "en": "(to) count",
+     "de": "zählen"
+    },
+    {
+     "id": 85,
+     "en": "(to) do a survey",
+     "de": "eine Umfrage durchführen"
     },
     {
      "id": 2,
@@ -25,10 +51,46 @@
      "ex": "I download a song. (to download)"
     },
     {
-     "id": 3,
-     "en": "(to) upload",
-     "de": "hochladen",
-     "ex": "She uploads a photo. (to upload)"
+     "id": 86,
+     "en": "(to) drink",
+     "de": "trinken"
+    },
+    {
+     "id": 29,
+     "en": "(to) drop",
+     "de": "(sich) fallen lassen",
+     "ex": "Don't drop the bottle! (to drop)"
+    },
+    {
+     "id": 87,
+     "en": "(to) end",
+     "de": "(be)enden"
+    },
+    {
+     "id": 38,
+     "en": "(to) give a presentation",
+     "de": "ein Referat halten",
+     "ex": "She gives a presentation. (to give a presentation)"
+    },
+    {
+     "id": 88,
+     "en": "(to) go around and around",
+     "de": "sich (immer wieder) drehen"
+    },
+    {
+     "id": 89,
+     "en": "(to) go wrong",
+     "de": "schiefgehen"
+    },
+    {
+     "id": 90,
+     "en": "(to) help",
+     "de": "helfen"
+    },
+    {
+     "id": 91,
+     "en": "(to) love",
+     "de": "lieben"
     },
     {
      "id": 4,
@@ -38,51 +100,71 @@
     },
     {
      "id": 5,
-     "en": "phone",
-     "de": "Telefon",
+     "en": "(to) phone",
+     "de": "telefonieren, anrufen",
      "ex": "The phone is on the table."
     },
     {
-     "id": 6,
-     "en": "camera",
-     "de": "Fotoapparat, Kamera",
-     "ex": "My camera is new."
+     "id": 92,
+     "en": "(to) pick sth. up",
+     "de": "etwas aufheben (vom Boden), etwas hochheben"
     },
     {
-     "id": 7,
-     "en": "games console",
-     "de": "Spielekonsole",
-     "ex": "He plays on his games console."
+     "id": 93,
+     "en": "(to) plan",
+     "de": "planen"
     },
     {
-     "id": 8,
-     "en": "on TV",
-     "de": "im Fernsehen",
-     "ex": "The film is on TV tonight."
+     "id": 27,
+     "en": "(to) prove",
+     "de": "nachweisen, beweisen",
+     "ex": "Can you prove it? (to prove)"
     },
     {
-     "id": 9,
-     "en": "(to) be on",
-     "de": "gezeigt werden, stattfinden",
-     "ex": "The show is on at 7. (to be on)"
+     "id": 94,
+     "en": "(to) put ... away",
+     "de": "... weglegen, zur Seite legen"
     },
     {
-     "id": 10,
-     "en": "news",
-     "de": "Nachrichten",
-     "ex": "That's good news!"
+     "id": 95,
+     "en": "(to) put up your hand",
+     "de": "sich melden, aufzeigen"
     },
     {
-     "id": 11,
-     "en": "gamer",
-     "de": "Spieler, Gamer",
-     "ex": "The gamer likes computer games."
+     "id": 96,
+     "en": "(to) rain",
+     "de": "regnen"
     },
     {
-     "id": 12,
-     "en": "exciting",
-     "de": "aufregend",
-     "ex": "The game is exciting."
+     "id": 97,
+     "en": "(to) repeat",
+     "de": "wiederholen"
+    },
+    {
+     "id": 98,
+     "en": "(to) seem (to be/do)",
+     "de": "erscheinen, (zu sein / zu tun) scheinen"
+    },
+    {
+     "id": 34,
+     "en": "(to) sleep",
+     "de": "schlafen",
+     "ex": "I sleep eight hours. (to sleep)"
+    },
+    {
+     "id": 99,
+     "en": "(to) smile",
+     "de": "lächeln"
+    },
+    {
+     "id": 100,
+     "en": "(to) snow",
+     "de": "schneien"
+    },
+    {
+     "id": 101,
+     "en": "(to) stand, stood",
+     "de": "stehen, sich (hin)stellen (2 Formen)"
     },
     {
      "id": 13,
@@ -91,22 +173,139 @@
      "ex": "We test the game. (to test)"
     },
     {
-     "id": 14,
-     "en": "test",
-     "de": "Klassenarbeit, Test",
-     "ex": "The test is on Friday."
+     "id": 102,
+     "en": "(to) trust",
+     "de": "vertrauen"
+    },
+    {
+     "id": 3,
+     "en": "(to) upload",
+     "de": "hochladen",
+     "ex": "She uploads a photo. (to upload)"
+    },
+    {
+     "id": 103,
+     "en": "(to) win, won",
+     "de": "gewinnen (2 Formen)"
+    },
+    {
+     "id": 36,
+     "en": "(to) work",
+     "de": "arbeiten",
+     "ex": "She works at school. (to work)"
+    },
+    {
+     "id": 104,
+     "en": "0.375",
+     "de": "9 Uhr morgens / vormittags"
+    },
+    {
+     "id": 105,
+     "en": "0.79166666666666663",
+     "de": "7 Uhr nachmittags / abends, 19 Uhr"
+    },
+    {
+     "id": 106,
+     "en": "against",
+     "de": "gegen"
+    },
+    {
+     "id": 107,
+     "en": "alone",
+     "de": "allein"
+    },
+    {
+     "id": 108,
+     "en": "another",
+     "de": "eine/e andere/r/s, noch ein/e"
+    },
+    {
+     "id": 109,
+     "en": "answer",
+     "de": "Antwort"
+    },
+    {
+     "id": 110,
+     "en": "Are you serious?",
+     "de": "Meinst du das ernst?"
+    },
+    {
+     "id": 111,
+     "en": "bald",
+     "de": "kahl, glatzköpfig"
+    },
+    {
+     "id": 112,
+     "en": "bottle",
+     "de": "Flasche"
+    },
+    {
+     "id": 113,
+     "en": "braces (pl)",
+     "de": "(eine) Zahnspange"
+    },
+    {
+     "id": 114,
+     "en": "by the sea",
+     "de": "am Meer"
+    },
+    {
+     "id": 115,
+     "en": "calendar",
+     "de": "Kalender"
+    },
+    {
+     "id": 6,
+     "en": "camera",
+     "de": "Fotoapparat, Kamera",
+     "ex": "My camera is new."
+    },
+    {
+     "id": 116,
+     "en": "chat",
+     "de": "Chat, Unterhaltung"
+    },
+    {
+     "id": 117,
+     "en": "chat",
+     "de": "Unterhaltung, Chat"
+    },
+    {
+     "id": 118,
+     "en": "circle",
+     "de": "Kreis"
     },
     {
      "id": 15,
      "en": "company",
-     "de": "Firma",
+     "de": "Firma, Gesellschaft",
      "ex": "The company makes games."
     },
     {
-     "id": 16,
-     "en": "programme",
-     "de": "(Fernseh-)Sendung",
-     "ex": "This programme is fun."
+     "id": 119,
+     "en": "cook",
+     "de": "Koch, Köchin"
+    },
+    {
+     "id": 120,
+     "en": "crime",
+     "de": "Verbrechen, Kriminalität"
+    },
+    {
+     "id": 121,
+     "en": "curly",
+     "de": "lockig"
+    },
+    {
+     "id": 23,
+     "en": "danger",
+     "de": "Gefahr",
+     "ex": "There is danger on the rocks."
+    },
+    {
+     "id": 122,
+     "en": "dark",
+     "de": "dunkel"
     },
     {
      "id": 17,
@@ -116,8 +315,8 @@
     },
     {
      "id": 18,
-     "en": "detective series",
-     "de": "Krimiserie",
+     "en": "detective series, (pl) detective series",
+     "de": "Krimiserie, Krimiserien",
      "ex": "I watch a detective series."
     },
     {
@@ -127,34 +326,30 @@
      "ex": "The documentary is about animals."
     },
     {
-     "id": 20,
-     "en": "reality",
-     "de": "Realität, Wirklichkeit",
-     "ex": "In reality, it is different."
+     "id": 123,
+     "en": "drink",
+     "de": "Getränk"
     },
     {
-     "id": 21,
-     "en": "presentation",
-     "de": "Referat, Präsentation",
-     "ex": "I give a presentation today."
+     "id": 124,
+     "en": "e-friend",
+     "de": "E-Mail-Freund/in"
     },
     {
-     "id": 22,
-     "en": "writer",
-     "de": "Autor/in, Verfasser/in",
-     "ex": "The writer writes a story."
+     "id": 125,
+     "en": "end",
+     "de": "Ende"
     },
     {
-     "id": 23,
-     "en": "danger *",
-     "de": "Gefahr *",
-     "ex": "There is danger on the rocks."
+     "id": 12,
+     "en": "exciting",
+     "de": "aufregend",
+     "ex": "The game is exciting."
     },
     {
-     "id": 24,
-     "en": "maybe",
-     "de": "vielleicht",
-     "ex": "Maybe we go home."
+     "id": 126,
+     "en": "exercise",
+     "de": "Übung, Aufgabe"
     },
     {
      "id": 25,
@@ -163,34 +358,26 @@
      "ex": "The experiment is exciting."
     },
     {
-     "id": 26,
-     "en": "sand",
-     "de": "Sand",
-     "ex": "The sand is warm."
+     "id": 127,
+     "en": "eye",
+     "de": "Auge"
     },
     {
-     "id": 27,
-     "en": "prove *",
-     "de": "nachweisen, beweisen *",
-     "ex": "Can you prove it? (to prove)"
+     "id": 11,
+     "en": "gamer",
+     "de": "Spieler, Gamer",
+     "ex": "The gamer likes computer games."
     },
     {
-     "id": 28,
-     "en": "wood *",
-     "de": "Holz, Wald *",
-     "ex": "The table is made of wood."
+     "id": 7,
+     "en": "games console",
+     "de": "Spielekonsole",
+     "ex": "He plays on his games console."
     },
     {
-     "id": 29,
-     "en": "drop *",
-     "de": "fallen lassen *",
-     "ex": "Don't drop the bottle! (to drop)"
-    },
-    {
-     "id": 30,
-     "en": "rock",
-     "de": "Felsen",
-     "ex": "The rock is big."
+     "id": 128,
+     "en": "glasses (pl)",
+     "de": "(eine) Brille"
     },
     {
      "id": 31,
@@ -199,22 +386,200 @@
      "ex": "My head hurts."
     },
     {
+     "id": 129,
+     "en": "help",
+     "de": "Hilfe"
+    },
+    {
+     "id": 130,
+     "en": "I'd like you to be ...",
+     "de": "Ich möchte, dass ihr ... seid."
+    },
+    {
      "id": 32,
      "en": "if",
      "de": "wenn, falls",
      "ex": "If it rains, we stay home."
     },
     {
-     "id": 33,
-     "en": "what if ...?",
-     "de": "was wäre, wenn ...?",
-     "ex": "What if we are late?"
+     "id": 131,
+     "en": "jacket",
+     "de": "Jacke, Jackett"
     },
     {
-     "id": 34,
-     "en": "(to) sleep",
-     "de": "schlafen",
-     "ex": "I sleep eight hours. (to sleep)"
+     "id": 132,
+     "en": "joke",
+     "de": "Witz, Scherz"
+    },
+    {
+     "id": 133,
+     "en": "kind",
+     "de": "nett, freundlich"
+    },
+    {
+     "id": 134,
+     "en": "love",
+     "de": "Liebe"
+    },
+    {
+     "id": 135,
+     "en": "match",
+     "de": "Spiel, Wettkampf"
+    },
+    {
+     "id": 24,
+     "en": "maybe",
+     "de": "vielleicht",
+     "ex": "Maybe we go home."
+    },
+    {
+     "id": 0,
+     "en": "media",
+     "de": "Medien",
+     "ex": "The media show news every day."
+    },
+    {
+     "id": 136,
+     "en": "message in a bottle",
+     "de": "Flaschenpost"
+    },
+    {
+     "id": 137,
+     "en": "more than",
+     "de": "mehr als"
+    },
+    {
+     "id": 10,
+     "en": "news",
+     "de": "Nachrichten",
+     "ex": "That's good news!"
+    },
+    {
+     "id": 8,
+     "en": "on TV",
+     "de": "im Fernsehen",
+     "ex": "The film is on TV tonight."
+    },
+    {
+     "id": 138,
+     "en": "onto the rocks",
+     "de": "auf die Felsen (hinauf)"
+    },
+    {
+     "id": 139,
+     "en": "opera",
+     "de": "Oper"
+    },
+    {
+     "id": 140,
+     "en": "past",
+     "de": "Vergangenheit"
+    },
+    {
+     "id": 141,
+     "en": "path",
+     "de": "Weg, Pfad"
+    },
+    {
+     "id": 142,
+     "en": "phone",
+     "de": "Telefon"
+    },
+    {
+     "id": 143,
+     "en": "piece",
+     "de": "Stück, Teil"
+    },
+    {
+     "id": 144,
+     "en": "piece of paper",
+     "de": "Stück Papier, Zettel"
+    },
+    {
+     "id": 145,
+     "en": "plan",
+     "de": "Plan"
+    },
+    {
+     "id": 21,
+     "en": "presentation",
+     "de": "Referat, Präsentation",
+     "ex": "I give a presentation today."
+    },
+    {
+     "id": 146,
+     "en": "prize",
+     "de": "Preis, Gewinn"
+    },
+    {
+     "id": 147,
+     "en": "problem",
+     "de": "Problem"
+    },
+    {
+     "id": 16,
+     "en": "programme",
+     "de": "(Fernseh-)Sendung",
+     "ex": "This programme is fun."
+    },
+    {
+     "id": 148,
+     "en": "rain",
+     "de": "Regen"
+    },
+    {
+     "id": 149,
+     "en": "real",
+     "de": "echt, wirklich"
+    },
+    {
+     "id": 20,
+     "en": "reality",
+     "de": "Realität, Wirklichkeit",
+     "ex": "In reality, it is different."
+    },
+    {
+     "id": 150,
+     "en": "Repeat after me.",
+     "de": "Sprich/Sprecht mir nach."
+    },
+    {
+     "id": 30,
+     "en": "rock",
+     "de": "Felsen",
+     "ex": "The rock is big."
+    },
+    {
+     "id": 151,
+     "en": "safe",
+     "de": "sicher (gefahrlos)"
+    },
+    {
+     "id": 26,
+     "en": "sand",
+     "de": "Sand",
+     "ex": "The sand is warm."
+    },
+    {
+     "id": 1,
+     "en": "screen",
+     "de": "Bildschirm",
+     "ex": "Look at the screen, please."
+    },
+    {
+     "id": 152,
+     "en": "serious",
+     "de": "ernst"
+    },
+    {
+     "id": 153,
+     "en": "shy",
+     "de": "scheu, schüchtern"
+    },
+    {
+     "id": 154,
+     "en": "situation",
+     "de": "Situation"
     },
     {
      "id": 35,
@@ -223,10 +588,113 @@
      "ex": "Good sleep is important."
     },
     {
-     "id": 36,
-     "en": "(to) work",
-     "de": "arbeiten",
-     "ex": "She works at school. (to work)"
+     "id": 155,
+     "en": "smile",
+     "de": "Lächeln"
+    },
+    {
+     "id": 156,
+     "en": "snow",
+     "de": "Schnee"
+    },
+    {
+     "id": 157,
+     "en": "soap",
+     "de": "Seife"
+    },
+    {
+     "id": 158,
+     "en": "soap (opera)",
+     "de": "Seifenoper, Soap"
+    },
+    {
+     "id": 159,
+     "en": "stadium",
+     "de": "Stadion"
+    },
+    {
+     "id": 160,
+     "en": "stone",
+     "de": "Stein"
+    },
+    {
+     "id": 161,
+     "en": "straight",
+     "de": "gerade, (Haare) glatt"
+    },
+    {
+     "id": 162,
+     "en": "subject",
+     "de": "Thema"
+    },
+    {
+     "id": 163,
+     "en": "suddenly",
+     "de": "plötzlich, auf einmal"
+    },
+    {
+     "id": 164,
+     "en": "survey",
+     "de": "Umfrage"
+    },
+    {
+     "id": 14,
+     "en": "test",
+     "de": "Klassenarbeit, Test",
+     "ex": "The test is on Friday."
+    },
+    {
+     "id": 39,
+     "en": "That's good news.",
+     "de": "Das sind gute Nachrichten.",
+     "ex": "That's good news, thank you!"
+    },
+    {
+     "id": 165,
+     "en": "through",
+     "de": "durch"
+    },
+    {
+     "id": 166,
+     "en": "tooth, (pl) teeth",
+     "de": "Zahn, Zähne"
+    },
+    {
+     "id": 167,
+     "en": "trust",
+     "de": "Vertrauen"
+    },
+    {
+     "id": 168,
+     "en": "type (of)",
+     "de": "Art, Sorte"
+    },
+    {
+     "id": 33,
+     "en": "what if ...?",
+     "de": "was wäre, wenn...?",
+     "ex": "What if we are late?"
+    },
+    {
+     "id": 169,
+     "en": "What's for homework?",
+     "de": "Was haben wir als Hausaufgabe(n) auf?"
+    },
+    {
+     "id": 170,
+     "en": "who",
+     "de": "wem, wen"
+    },
+    {
+     "id": 171,
+     "en": "winner",
+     "de": "Gewinner/in, Sieger/in"
+    },
+    {
+     "id": 28,
+     "en": "wood",
+     "de": "Holz, Wald",
+     "ex": "The table is made of wood."
     },
     {
      "id": 37,
@@ -235,154 +703,80 @@
      "ex": "The work is easy."
     },
     {
-     "id": 38,
-     "en": "(to) give a presentation",
-     "de": "ein Referat halten",
-     "ex": "She gives a presentation. (to give a presentation)"
+     "id": 22,
+     "en": "writer",
+     "de": "Autor/in, Verfasser/in",
+     "ex": "The writer writes a story."
     },
     {
-     "id": 39,
-     "en": "That's good news.",
-     "de": "Das sind gute Nachrichten.",
-     "ex": "That's good news, thank you!"
+     "id": 172,
+     "en": "writing",
+     "de": "Schrift"
+    },
+    {
+     "id": 173,
+     "en": "young",
+     "de": "jung"
     }
    ]
   },
   {
    "id": "Unit 2",
    "name": "Unit 2",
+   "subtitle": "In the country",
    "words": [
     {
-     "id": 40,
-     "en": "waterfall",
-     "de": "Wasserfall",
-     "ex": "The waterfall is loud."
+     "id": 174,
+     "en": "(to) agree (with sb./sth.)",
+     "de": "jm. zustimmen, mit etwas einverstanden sein"
     },
     {
-     "id": 41,
-     "en": "mountain",
-     "de": "Berg",
-     "ex": "The mountain is high."
+     "id": 175,
+     "en": "(to) be cold",
+     "de": "frieren"
     },
     {
-     "id": 42,
-     "en": "lake",
-     "de": "(Binnen-)See",
-     "ex": "We swim in the lake."
+     "id": 176,
+     "en": "(to) borrow sth.",
+     "de": "(sich) etwas leihen"
     },
     {
-     "id": 43,
-     "en": "coast",
-     "de": "Küste",
-     "ex": "The coast is beautiful."
+     "id": 177,
+     "en": "(to) charge (a mobile phone)",
+     "de": "(ein Mobiltelefon) aufladen"
     },
     {
-     "id": 44,
-     "en": "field",
-     "de": "Feld, Weide",
-     "ex": "The ponies are on the field."
+     "id": 178,
+     "en": "(to) contact sb.",
+     "de": "Kontakt aufnehmen mit jm., sich in Verbindung setzen mit jm."
     },
     {
-     "id": 45,
-     "en": "grass",
-     "de": "Gras, Rasen",
-     "ex": "The grass is green."
+     "id": 179,
+     "en": "(to) cry",
+     "de": "weinen"
     },
     {
-     "id": 46,
-     "en": "postcard",
-     "de": "Postkarte",
-     "ex": "I write a postcard."
-    },
-    {
-     "id": 47,
-     "en": "pony",
-     "de": "Pony",
-     "ex": "The pony is small and friendly."
-    },
-    {
-     "id": 48,
-     "en": "farm",
-     "de": "Bauernhof, Farm",
-     "ex": "Animals live on the farm."
-    },
-    {
-     "id": 49,
-     "en": "moor *",
-     "de": "Heide(land), Moor *",
-     "ex": "The moor is wet."
-    },
-    {
-     "id": 50,
-     "en": "hill",
-     "de": "Hügel",
-     "ex": "We walk up the hill."
-    },
-    {
-     "id": 51,
-     "en": "forest",
-     "de": "Wald",
-     "ex": "The forest is dark."
-    },
-    {
-     "id": 52,
-     "en": "bridge",
-     "de": "Brücke",
-     "ex": "We go over the bridge."
-    },
-    {
-     "id": 53,
-     "en": "river",
-     "de": "Fluss",
-     "ex": "The river is cold."
-    },
-    {
-     "id": 54,
-     "en": "(to) get (to) *",
-     "de": "gelangen, (hin)kommen nach *",
-     "ex": "How do I get to the lake? (to get to)"
-    },
-    {
-     "id": 55,
-     "en": "raft *",
-     "de": "Floß *",
-     "ex": "We sit on a raft."
-    },
-    {
-     "id": 56,
-     "en": "wetsuit *",
-     "de": "Taucheranzug, Neoprenanzug *",
-     "ex": "You need a wetsuit in cold water."
-    },
-    {
-     "id": 57,
-     "en": "swimming costume",
-     "de": "Badeanzug",
-     "ex": "Her swimming costume is blue."
-    },
-    {
-     "id": 58,
-     "en": "swimming trunks",
-     "de": "Badehose",
-     "ex": "His swimming trunks are red."
-    },
-    {
-     "id": 59,
-     "en": "towel",
-     "de": "Handtuch",
-     "ex": "The towel is wet."
-    },
-    {
-     "id": 60,
-     "en": "definitely",
-     "de": "auf jeden Fall, ganz bestimmt",
-     "ex": "I will definitely come."
+     "id": 180,
+     "en": "(to) feed, fed",
+     "de": "füttern, ernähren (2 Formen)"
     },
     {
      "id": 61,
-     "en": "forget, forgot",
-     "de": "vergessen (forget - forgot)",
+     "en": "(to) forget, forgot",
+     "de": "vergessen (2 Formen)",
      "ex": "Don't forget your boots! (to forget)"
+    },
+    {
+     "id": 54,
+     "en": "(to) get (to)",
+     "de": "gelangen, (hin) kommen (nach)",
+     "ex": "How do I get to the lake? (to get to)"
+    },
+    {
+     "id": 76,
+     "en": "(to) have a cold",
+     "de": "erkältet sein",
+     "ex": "She has a cold. (to have a cold)"
     },
     {
      "id": 62,
@@ -391,40 +785,45 @@
      "ex": "We hike in the hills. (to hike)"
     },
     {
-     "id": 63,
-     "en": "hiking",
-     "de": "(das) Wandern",
-     "ex": "Hiking is fun."
+     "id": 181,
+     "en": "(to) knock (at sth.)",
+     "de": "(an)klopfen (an etwas)"
     },
     {
-     "id": 64,
-     "en": "boot",
-     "de": "Stiefel (meist: boots)",
-     "ex": "My boots are wet."
+     "id": 182,
+     "en": "(to) laugh",
+     "de": "lachen"
     },
     {
-     "id": 65,
-     "en": "map",
-     "de": "Landkarte, Stadtplan",
-     "ex": "Look at the map."
+     "id": 183,
+     "en": "(to) lend sb. sth.",
+     "de": "jmd. etwas leihen"
     },
     {
-     "id": 66,
-     "en": "gate",
-     "de": "Tor, Gatter",
-     "ex": "Open the gate, please."
+     "id": 184,
+     "en": "(to) lend, lent",
+     "de": "leihen, verleihen (2 Formen)"
     },
     {
-     "id": 67,
-     "en": "tent",
-     "de": "Zelt",
-     "ex": "We sleep in a tent."
+     "id": 185,
+     "en": "(to) look after",
+     "de": "sich kümmern um, aufpassen auf"
     },
     {
-     "id": 68,
-     "en": "fire",
-     "de": "Feuer",
-     "ex": "We sit by the fire."
+     "id": 186,
+     "en": "(to) mean, meant",
+     "de": "bedeuten, meinen (sagen wollen) (2 Formen)"
+    },
+    {
+     "id": 187,
+     "en": "(to) report (on)",
+     "de": "berichten (über)"
+    },
+    {
+     "id": 71,
+     "en": "(to) turn around",
+     "de": "sich umdrehen",
+     "ex": "Turn around, please. (to turn around)"
     },
     {
      "id": 69,
@@ -439,28 +838,72 @@
      "ex": "Turn right at the bridge. (to turn right)"
     },
     {
-     "id": 71,
-     "en": "(to) turn around",
-     "de": "sich umdrehen",
-     "ex": "Turn around, please. (to turn around)"
+     "id": 188,
+     "en": "(to) turn to sth.",
+     "de": "zu etwas werden"
     },
     {
-     "id": 72,
-     "en": "frog",
-     "de": "Frosch",
-     "ex": "The frog is green."
+     "id": 189,
+     "en": "20 minutes ago",
+     "de": "vor 20 Minuten"
     },
     {
-     "id": 73,
-     "en": "leaflet",
-     "de": "Faltblatt, Informationsblatt",
-     "ex": "The leaflet has a map."
+     "id": 190,
+     "en": "a long time ago",
+     "de": "vor langer Zeit"
     },
     {
-     "id": 74,
-     "en": "ice",
-     "de": "Eis (gefrorenes Wasser)",
-     "ex": "The ice is cold."
+     "id": 191,
+     "en": "a pair of gloves",
+     "de": "ein Paar Handschuhe"
+    },
+    {
+     "id": 192,
+     "en": "across a bridge",
+     "de": "über eine Brücke"
+    },
+    {
+     "id": 193,
+     "en": "along the path",
+     "de": "den Weg entlang"
+    },
+    {
+     "id": 194,
+     "en": "as a singer",
+     "de": "als ein Sänger / als eine Sängerin"
+    },
+    {
+     "id": 195,
+     "en": "beautiful",
+     "de": "wunderschön"
+    },
+    {
+     "id": 64,
+     "en": "boot",
+     "de": "Stiefel",
+     "ex": "My boots are wet."
+    },
+    {
+     "id": 196,
+     "en": "brave",
+     "de": "mutig"
+    },
+    {
+     "id": 52,
+     "en": "bridge",
+     "de": "Brücke",
+     "ex": "We go over the bridge."
+    },
+    {
+     "id": 197,
+     "en": "cave",
+     "de": "Höhle"
+    },
+    {
+     "id": 43,
+     "en": "coast",
+     "de": "Küste",
+     "ex": "The coast is beautiful."
     },
     {
      "id": 75,
@@ -469,10 +912,14 @@
      "ex": "The water is cold."
     },
     {
-     "id": 76,
-     "en": "(to) have a cold",
-     "de": "erkaeltet sein",
-     "ex": "She has a cold. (to have a cold)"
+     "id": 198,
+     "en": "cold",
+     "de": "Kälte, Erkältung"
+    },
+    {
+     "id": 199,
+     "en": "contact",
+     "de": "Kontakt"
     },
     {
      "id": 77,
@@ -481,16 +928,2980 @@
      "ex": "That's a crazy idea!"
     },
     {
+     "id": 200,
+     "en": "deer, (pl) deer",
+     "de": "Reh, Hirsch, Rehe, Hirsche"
+    },
+    {
+     "id": 60,
+     "en": "definitely",
+     "de": "auf jeden Fall, ganz bestimmt",
+     "ex": "I will definitely come."
+    },
+    {
+     "id": 201,
+     "en": "equipment (no pl)",
+     "de": "Ausrüstung"
+    },
+    {
+     "id": 48,
+     "en": "farm",
+     "de": "Bauernhof, Farm",
+     "ex": "Animals live on the farm."
+    },
+    {
+     "id": 202,
+     "en": "farmer",
+     "de": "Bauer, Bäuerin, Landwirt/in"
+    },
+    {
+     "id": 203,
+     "en": "ferryman, (pl) ferrymen",
+     "de": "Fährmann, Fährmänner"
+    },
+    {
+     "id": 44,
+     "en": "field",
+     "de": "Feld, Weide",
+     "ex": "The ponies are on the field."
+    },
+    {
+     "id": 204,
+     "en": "figure",
+     "de": "Figur"
+    },
+    {
+     "id": 68,
+     "en": "fire",
+     "de": "Feuer",
+     "ex": "We sit by the fire."
+    },
+    {
+     "id": 51,
+     "en": "forest",
+     "de": "Wald",
+     "ex": "The forest is dark."
+    },
+    {
+     "id": 205,
+     "en": "fox",
+     "de": "Fuchs"
+    },
+    {
+     "id": 72,
+     "en": "frog",
+     "de": "Frosch",
+     "ex": "The frog is green."
+    },
+    {
+     "id": 66,
+     "en": "gate",
+     "de": "Tor, Gatter",
+     "ex": "Open the gate, please."
+    },
+    {
+     "id": 206,
+     "en": "ghost",
+     "de": "Geist, Gespenst"
+    },
+    {
+     "id": 207,
+     "en": "glove",
+     "de": "Handschuh"
+    },
+    {
+     "id": 208,
+     "en": "Go along the road.",
+     "de": "Geh die Straße entlang."
+    },
+    {
+     "id": 209,
+     "en": "good",
+     "de": "brav"
+    },
+    {
+     "id": 45,
+     "en": "grass",
+     "de": "Gras, Rasen",
+     "ex": "The grass is green."
+    },
+    {
+     "id": 210,
+     "en": "hat",
+     "de": "Hut, Mütze"
+    },
+    {
+     "id": 211,
+     "en": "heart",
+     "de": "Herz"
+    },
+    {
+     "id": 212,
+     "en": "hers",
+     "de": "ihrer, ihre, ihrs (Singular)"
+    },
+    {
+     "id": 63,
+     "en": "hiking",
+     "de": "(das) Wandern",
+     "ex": "Hiking is fun."
+    },
+    {
+     "id": 50,
+     "en": "hill",
+     "de": "Hügel",
+     "ex": "We walk up the hill."
+    },
+    {
+     "id": 213,
+     "en": "his",
+     "de": "seiner, seine, seins"
+    },
+    {
+     "id": 214,
+     "en": "hood",
+     "de": "Kapuze"
+    },
+    {
+     "id": 215,
+     "en": "I agree with you.",
+     "de": "Ich stimme dir zu."
+    },
+    {
+     "id": 216,
+     "en": "I want to have fun.",
+     "de": "Ich will Spaß haben."
+    },
+    {
+     "id": 217,
+     "en": "I will have fun.",
+     "de": "Ich werde Spaß haben."
+    },
+    {
+     "id": 74,
+     "en": "ice",
+     "de": "Eis (gefrorenes Wasser)",
+     "ex": "The ice is cold."
+    },
+    {
+     "id": 218,
+     "en": "ill",
+     "de": "krank"
+    },
+    {
+     "id": 219,
+     "en": "in Hill Road",
+     "de": "in der Hill Road"
+    },
+    {
+     "id": 220,
+     "en": "in Park Street",
+     "de": "in der Park Street"
+    },
+    {
+     "id": 221,
+     "en": "just",
+     "de": "nur, bloß, einfach"
+    },
+    {
+     "id": 222,
+     "en": "lady",
+     "de": "Dame"
+    },
+    {
+     "id": 42,
+     "en": "lake",
+     "de": "(Binnen-)See",
+     "ex": "We swim in the lake."
+    },
+    {
+     "id": 223,
+     "en": "last weekend",
+     "de": "letztes Wochenende"
+    },
+    {
+     "id": 73,
+     "en": "leaflet",
+     "de": "Faltblatt, Informationsblatt",
+     "ex": "The leaflet has a map."
+    },
+    {
+     "id": 224,
+     "en": "litter",
+     "de": "Abfall"
+    },
+    {
+     "id": 225,
+     "en": "litter bin",
+     "de": "Mülleimer"
+    },
+    {
+     "id": 226,
+     "en": "many years ago",
+     "de": "vor vielen Jahren"
+    },
+    {
+     "id": 65,
+     "en": "map",
+     "de": "Landkarte, Stadtplan",
+     "ex": "Look at the map."
+    },
+    {
      "id": 78,
-     "en": "mine *",
-     "de": "meine/r/s (Besitz) *",
+     "en": "mine",
+     "de": "mein, meiner, meins",
      "ex": "This book is mine."
     },
     {
+     "id": 227,
+     "en": "monk",
+     "de": "Mönch"
+    },
+    {
+     "id": 49,
+     "en": "moor",
+     "de": "Heide(land), Moor",
+     "ex": "The moor is wet."
+    },
+    {
+     "id": 41,
+     "en": "mountain",
+     "de": "Berg",
+     "ex": "The mountain is high."
+    },
+    {
+     "id": 228,
+     "en": "next weekend",
+     "de": "nächstes Wochenende"
+    },
+    {
+     "id": 229,
+     "en": "not ... until",
+     "de": "erst, wenn ..."
+    },
+    {
+     "id": 230,
+     "en": "one day",
+     "de": "eines Tages"
+    },
+    {
+     "id": 231,
+     "en": "one penknife",
+     "de": "ein Taschenmesser"
+    },
+    {
+     "id": 232,
+     "en": "ours",
+     "de": "unserer, unsere, unseres"
+    },
+    {
+     "id": 233,
+     "en": "over",
+     "de": "über, hinüber"
+    },
+    {
+     "id": 234,
+     "en": "past (the wood)",
+     "de": "(am Wald) vorbei"
+    },
+    {
+     "id": 235,
+     "en": "pigeon",
+     "de": "Taube"
+    },
+    {
+     "id": 47,
+     "en": "pony",
+     "de": "Pony",
+     "ex": "The pony is small and friendly."
+    },
+    {
+     "id": 236,
+     "en": "poor",
+     "de": "arm"
+    },
+    {
+     "id": 46,
+     "en": "postcard",
+     "de": "Postkarte",
+     "ex": "I write a postcard."
+    },
+    {
+     "id": 237,
+     "en": "private",
+     "de": "privat, persönlich"
+    },
+    {
+     "id": 238,
+     "en": "probably",
+     "de": "wahrscheinlich"
+    },
+    {
+     "id": 239,
+     "en": "public",
+     "de": "öffentlich"
+    },
+    {
+     "id": 240,
+     "en": "quite",
+     "de": "ziemlich, ganz"
+    },
+    {
+     "id": 55,
+     "en": "raft",
+     "de": "Floß",
+     "ex": "We sit on a raft."
+    },
+    {
+     "id": 241,
+     "en": "red deer",
+     "de": "Rotwild"
+    },
+    {
+     "id": 242,
+     "en": "report",
+     "de": "Bericht, Referat"
+    },
+    {
+     "id": 53,
+     "en": "river",
+     "de": "Fluss",
+     "ex": "The river is cold."
+    },
+    {
+     "id": 243,
+     "en": "road",
+     "de": "Straße (in Orten, Landstraße zwischen Orten)"
+    },
+    {
+     "id": 244,
+     "en": "rule",
+     "de": "Regel"
+    },
+    {
+     "id": 245,
+     "en": "scary",
+     "de": "unheimlich, beängstigend, gruselig"
+    },
+    {
+     "id": 246,
+     "en": "sign",
+     "de": "Schild, Zeichen"
+    },
+    {
+     "id": 247,
+     "en": "strange",
+     "de": "seltsam, sonderbar"
+    },
+    {
+     "id": 248,
+     "en": "sure",
+     "de": "sicher (ohne Zweifel)"
+    },
+    {
+     "id": 57,
+     "en": "swimming costume",
+     "de": "Badeanzug",
+     "ex": "Her swimming costume is blue."
+    },
+    {
+     "id": 58,
+     "en": "swimming trunks (pl)",
+     "de": "Badehose",
+     "ex": "His swimming trunks are red."
+    },
+    {
+     "id": 67,
+     "en": "tent",
+     "de": "Zelt",
+     "ex": "We sleep in a tent."
+    },
+    {
+     "id": 249,
+     "en": "the next day",
+     "de": "am nächsten Tag"
+    },
+    {
+     "id": 250,
+     "en": "the next morning",
+     "de": "am nächsten Morgen"
+    },
+    {
+     "id": 251,
+     "en": "the ponies on the field",
+     "de": "die Ponys auf der Weide"
+    },
+    {
+     "id": 252,
+     "en": "theirs",
+     "de": "ihrer, ihre, ihrs (Plural)"
+    },
+    {
+     "id": 253,
+     "en": "this evening",
+     "de": "heute Abend"
+    },
+    {
+     "id": 254,
+     "en": "this weekend",
+     "de": "dieses Wochenende"
+    },
+    {
+     "id": 255,
+     "en": "torch",
+     "de": "Taschenlampe"
+    },
+    {
+     "id": 59,
+     "en": "towel",
+     "de": "Handtuch",
+     "ex": "The towel is wet."
+    },
+    {
+     "id": 256,
+     "en": "training",
+     "de": "Training, Ausbildung, Dressur"
+    },
+    {
+     "id": 257,
+     "en": "two penknives",
+     "de": "zwei Taschenmesser"
+    },
+    {
+     "id": 258,
+     "en": "until",
+     "de": "bis (zeitlich)"
+    },
+    {
+     "id": 259,
+     "en": "voice",
+     "de": "Stimme"
+    },
+    {
+     "id": 40,
+     "en": "waterfall",
+     "de": "Wasserfall",
+     "ex": "The waterfall is loud."
+    },
+    {
+     "id": 260,
+     "en": "wet",
+     "de": "nass"
+    },
+    {
+     "id": 56,
+     "en": "wetsuit",
+     "de": "Taucheranzug, Neoprenanzug",
+     "ex": "You need a wetsuit in cold water."
+    },
+    {
      "id": 79,
-     "en": "you won't need ... *",
-     "de": "du wirst ... nicht brauchen *",
+     "en": "you won't need (you will not need) ...",
+     "de": "du wirst... nicht brauchen",
      "ex": "You won't need a towel."
+    },
+    {
+     "id": 261,
+     "en": "you'll (= you will) fall",
+     "de": "du wirst fallen"
+    },
+    {
+     "id": 262,
+     "en": "yours",
+     "de": "deiner, deine, deins"
+    },
+    {
+     "id": 263,
+     "en": "yours",
+     "de": "eurer, eure, eures"
+    }
+   ]
+  },
+  {
+   "id": "Unit 3",
+   "name": "Unit 3",
+   "subtitle": "A trip to London",
+   "words": [
+    {
+     "id": 264,
+     "en": "(to) afford (sth.)",
+     "de": "sich etwas leisten können"
+    },
+    {
+     "id": 265,
+     "en": "(to) afford (to do sth.)",
+     "de": "sich leisten können, etwas zu tun"
+    },
+    {
+     "id": 266,
+     "en": "(to) be right",
+     "de": "Recht haben"
+    },
+    {
+     "id": 267,
+     "en": "(to) be wrong",
+     "de": "Unrecht haben"
+    },
+    {
+     "id": 268,
+     "en": "(to) change",
+     "de": "umsteigen"
+    },
+    {
+     "id": 269,
+     "en": "(to) decide (to do sth.)",
+     "de": "beschließen, sich entscheiden (etwas zu tun)"
+    },
+    {
+     "id": 270,
+     "en": "(to) enjoy",
+     "de": "genießen"
+    },
+    {
+     "id": 271,
+     "en": "(to) enjoy doing sth.",
+     "de": "genießen, etwas zu tun"
+    },
+    {
+     "id": 272,
+     "en": "(to) get off (a bus)",
+     "de": "aussteigen (aus einem Bus)"
+    },
+    {
+     "id": 273,
+     "en": "(to) get on (a bus)",
+     "de": "einsteigen (in einen Bus)"
+    },
+    {
+     "id": 274,
+     "en": "(to) have a good time",
+     "de": "Spaß haben, sich vergnügen"
+    },
+    {
+     "id": 275,
+     "en": "(to) mind",
+     "de": "beachten, achten auf"
+    },
+    {
+     "id": 276,
+     "en": "(to) miss",
+     "de": "vermissen"
+    },
+    {
+     "id": 277,
+     "en": "amazing",
+     "de": "erstaunlich, großartig"
+    },
+    {
+     "id": 278,
+     "en": "anywhere",
+     "de": "irgendwo(hin), überall(hin)"
+    },
+    {
+     "id": 279,
+     "en": "anywhere else",
+     "de": "irgendwo anders"
+    },
+    {
+     "id": 280,
+     "en": "Arabic",
+     "de": "arabisch, Arabisch"
+    },
+    {
+     "id": 281,
+     "en": "artist",
+     "de": "Künstler/in"
+    },
+    {
+     "id": 282,
+     "en": "as .... as",
+     "de": "genauso ... wie"
+    },
+    {
+     "id": 283,
+     "en": "as good as",
+     "de": "genauso gut wie"
+    },
+    {
+     "id": 284,
+     "en": "Bangladeshi",
+     "de": "Bangladescher/in, bangladeschisch"
+    },
+    {
+     "id": 285,
+     "en": "bat",
+     "de": "Fledermaus"
+    },
+    {
+     "id": 286,
+     "en": "bell",
+     "de": "Glocke"
+    },
+    {
+     "id": 287,
+     "en": "big wheel",
+     "de": "Riesenrad"
+    },
+    {
+     "id": 288,
+     "en": "bus stop",
+     "de": "Bushaltestelle"
+    },
+    {
+     "id": 289,
+     "en": "busy",
+     "de": "hektisch, belebt"
+    },
+    {
+     "id": 290,
+     "en": "capital (city)",
+     "de": "Hauptstadt"
+    },
+    {
+     "id": 291,
+     "en": "carnival",
+     "de": "Karneval"
+    },
+    {
+     "id": 292,
+     "en": "cathedral",
+     "de": "Kathedrale, Dom"
+    },
+    {
+     "id": 293,
+     "en": "costume",
+     "de": "Kostüm, Verkleidung"
+    },
+    {
+     "id": 294,
+     "en": "dancer",
+     "de": "Tänzer/in"
+    },
+    {
+     "id": 295,
+     "en": "department store",
+     "de": "Kaufhaus"
+    },
+    {
+     "id": 296,
+     "en": "direction",
+     "de": "Richtung"
+    },
+    {
+     "id": 297,
+     "en": "directions (pl)",
+     "de": "Wegbeschreibung"
+    },
+    {
+     "id": 298,
+     "en": "drug",
+     "de": "Droge, Rauschgift"
+    },
+    {
+     "id": 299,
+     "en": "eastbound",
+     "de": "in Richtung Osten (Zug, Bus)"
+    },
+    {
+     "id": 300,
+     "en": "Egypt",
+     "de": "Ägypten"
+    },
+    {
+     "id": 301,
+     "en": "Egyptian",
+     "de": "Ägypter/in, ägyptisch"
+    },
+    {
+     "id": 302,
+     "en": "escalator",
+     "de": "Rolltreppe"
+    },
+    {
+     "id": 303,
+     "en": "exit",
+     "de": "Ausgang, Ausfahrt"
+    },
+    {
+     "id": 304,
+     "en": "FAQ (= frequently asked questions)",
+     "de": "häufig gestellte Fragen"
+    },
+    {
+     "id": 305,
+     "en": "far",
+     "de": "weit (entfernt)"
+    },
+    {
+     "id": 306,
+     "en": "far away",
+     "de": "weit weg"
+    },
+    {
+     "id": 307,
+     "en": "floor",
+     "de": "Etage, Stock"
+    },
+    {
+     "id": 308,
+     "en": "for example",
+     "de": "zum Beispiel"
+    },
+    {
+     "id": 309,
+     "en": "for this reason",
+     "de": "aus diesem Grund"
+    },
+    {
+     "id": 310,
+     "en": "game",
+     "de": "Spiel (Sport, Gesellschaftsspiel)"
+    },
+    {
+     "id": 311,
+     "en": "hairdresser",
+     "de": "Friseur/in"
+    },
+    {
+     "id": 312,
+     "en": "hairdresser's",
+     "de": "Friseursalon"
+    },
+    {
+     "id": 313,
+     "en": "high",
+     "de": "hoch"
+    },
+    {
+     "id": 314,
+     "en": "homeless",
+     "de": "obdachlos"
+    },
+    {
+     "id": 315,
+     "en": "hopeless",
+     "de": "hoffnungslos"
+    },
+    {
+     "id": 316,
+     "en": "I don't mind ...",
+     "de": "Es macht mir nichts aus ..."
+    },
+    {
+     "id": 317,
+     "en": "I don't mind helping you.",
+     "de": "Ich helfe dir gern."
+    },
+    {
+     "id": 318,
+     "en": "Indian",
+     "de": "indisch"
+    },
+    {
+     "id": 319,
+     "en": "Iraqi",
+     "de": "irakisch"
+    },
+    {
+     "id": 320,
+     "en": "Irish",
+     "de": "irisch, aus Irland"
+    },
+    {
+     "id": 321,
+     "en": "Jack is at the hairdresser's.",
+     "de": "Jack ist beim Friseur."
+    },
+    {
+     "id": 322,
+     "en": "Japanese",
+     "de": "Japaner/in, japanisch, Japanisch"
+    },
+    {
+     "id": 323,
+     "en": "jobless",
+     "de": "arbeitslos"
+    },
+    {
+     "id": 324,
+     "en": "kilometre (km)",
+     "de": "Kilometer"
+    },
+    {
+     "id": 325,
+     "en": "Kurdish",
+     "de": "Kurdisch"
+    },
+    {
+     "id": 326,
+     "en": "line",
+     "de": "U-Bahn-Linie"
+    },
+    {
+     "id": 327,
+     "en": "lion",
+     "de": "Löwe"
+    },
+    {
+     "id": 328,
+     "en": "Lithuania",
+     "de": "Litauen"
+    },
+    {
+     "id": 329,
+     "en": "Lithuanian",
+     "de": "Litauer/in, litauisch, Litauisch"
+    },
+    {
+     "id": 330,
+     "en": "machine",
+     "de": "Automat, Maschine"
+    },
+    {
+     "id": 331,
+     "en": "match",
+     "de": "Wettkampf"
+    },
+    {
+     "id": 332,
+     "en": "million",
+     "de": "Million"
+    },
+    {
+     "id": 333,
+     "en": "Mind the gap!",
+     "de": "Achten Sie auf den Abstand!"
+    },
+    {
+     "id": 334,
+     "en": "modern",
+     "de": "modern"
+    },
+    {
+     "id": 335,
+     "en": "multicultural",
+     "de": "multikulturell"
+    },
+    {
+     "id": 336,
+     "en": "nationality",
+     "de": "Nationalität"
+    },
+    {
+     "id": 337,
+     "en": "newspaper",
+     "de": "(Tages-)Zeitung"
+    },
+    {
+     "id": 338,
+     "en": "northbound",
+     "de": "in Richtung Norden (Zug, Bus)"
+    },
+    {
+     "id": 339,
+     "en": "not ... anywhere",
+     "de": "nirgends"
+    },
+    {
+     "id": 340,
+     "en": "not as as",
+     "de": "nicht so wie"
+    },
+    {
+     "id": 341,
+     "en": "off-peak",
+     "de": "außerhalb der Stoßzeiten"
+    },
+    {
+     "id": 342,
+     "en": "over there",
+     "de": "da drüben, dort drüben"
+    },
+    {
+     "id": 343,
+     "en": "Pakistani",
+     "de": "pakistanisch"
+    },
+    {
+     "id": 344,
+     "en": "parliament",
+     "de": "Parlament"
+    },
+    {
+     "id": 345,
+     "en": "part (of)",
+     "de": "Teil (von)"
+    },
+    {
+     "id": 346,
+     "en": "passenger",
+     "de": "Passagier/in, Fahrgast"
+    },
+    {
+     "id": 347,
+     "en": "platform",
+     "de": "Bahnsteig"
+    },
+    {
+     "id": 348,
+     "en": "play",
+     "de": "Schauspiel, Theaterstück"
+    },
+    {
+     "id": 349,
+     "en": "point",
+     "de": "Punkt"
+    },
+    {
+     "id": 350,
+     "en": "price",
+     "de": "(Kauf-)Preis"
+    },
+    {
+     "id": 351,
+     "en": "reason",
+     "de": "Grund, Begründung"
+    },
+    {
+     "id": 352,
+     "en": "Romania",
+     "de": "Rumänien"
+    },
+    {
+     "id": 353,
+     "en": "Romanian",
+     "de": "Rumäne/Rumänin, rumänisch, Rumänisch"
+    },
+    {
+     "id": 354,
+     "en": "Russian",
+     "de": "russisch, Russisch, Russe/Russin"
+    },
+    {
+     "id": 355,
+     "en": "shoulder",
+     "de": "Schulter"
+    },
+    {
+     "id": 356,
+     "en": "sight",
+     "de": "Sehenswürdigkeit"
+    },
+    {
+     "id": 357,
+     "en": "skyscraper",
+     "de": "Wolkenkratzer"
+    },
+    {
+     "id": 358,
+     "en": "so many",
+     "de": "so viele"
+    },
+    {
+     "id": 359,
+     "en": "southbound",
+     "de": "in Richtung Süden (Zug, Bus)"
+    },
+    {
+     "id": 360,
+     "en": "still",
+     "de": "(immer) noch, trotzdem"
+    },
+    {
+     "id": 361,
+     "en": "stop",
+     "de": "Halt, Haltepunkt"
+    },
+    {
+     "id": 362,
+     "en": "takeaway",
+     "de": "Schnellrestaurant, Essen zum Mitnehmen"
+    },
+    {
+     "id": 363,
+     "en": "tall",
+     "de": "groß (Person), hoch (Gebäude)"
+    },
+    {
+     "id": 364,
+     "en": "Thai",
+     "de": "Thailänder/in, thailändisch, Thailändisch"
+    },
+    {
+     "id": 365,
+     "en": "The Lion King",
+     "de": "König der Löwen"
+    },
+    {
+     "id": 366,
+     "en": "The train will arrive at platform 4.",
+     "de": "Der Zug fährt auf Gleis 4 ein."
+    },
+    {
+     "id": 367,
+     "en": "the Tube",
+     "de": "(infml) die Londoner U-Bahn"
+    },
+    {
+     "id": 368,
+     "en": "thousand",
+     "de": "tausend"
+    },
+    {
+     "id": 369,
+     "en": "ticket gate",
+     "de": "Sperre (zur Fahrkartenkontrolle)"
+    },
+    {
+     "id": 370,
+     "en": "too expensive",
+     "de": "zu teuer"
+    },
+    {
+     "id": 371,
+     "en": "underground",
+     "de": "U-Bahn"
+    },
+    {
+     "id": 372,
+     "en": "usual",
+     "de": "üblich, gewöhnlich"
+    },
+    {
+     "id": 373,
+     "en": "vet",
+     "de": "Tierarzt/-ärztin"
+    },
+    {
+     "id": 374,
+     "en": "westbound",
+     "de": "in Richtung Westen (Zug, Bus)"
+    },
+    {
+     "id": 375,
+     "en": "wheel",
+     "de": "Rad"
+    },
+    {
+     "id": 376,
+     "en": "Where do I have to change (trains)?",
+     "de": "Wo muss ich umsteigen?"
+    },
+    {
+     "id": 377,
+     "en": "while",
+     "de": "während"
+    },
+    {
+     "id": 378,
+     "en": "without",
+     "de": "ohne"
+    },
+    {
+     "id": 379,
+     "en": "worst",
+     "de": "der/die/das schlechteste, schlimmste, am schlechtesten, am schlimmsten"
+    },
+    {
+     "id": 380,
+     "en": "zone",
+     "de": "Zone"
+    }
+   ]
+  },
+  {
+   "id": "Unit 4",
+   "name": "Unit 4",
+   "subtitle": "In Scotland",
+   "words": [
+    {
+     "id": 381,
+     "en": "(to) believe (in sth.)",
+     "de": "(an etwas) glauben"
+    },
+    {
+     "id": 382,
+     "en": "(to) call",
+     "de": "nennen, rufen, anrufen"
+    },
+    {
+     "id": 383,
+     "en": "(to) cook",
+     "de": "kochen, (Essen) zubereiten"
+    },
+    {
+     "id": 384,
+     "en": "(to) cost, cost",
+     "de": "kosten (2 Formen)"
+    },
+    {
+     "id": 385,
+     "en": "(to) disagree",
+     "de": "nicht zustimmen, widersprechen"
+    },
+    {
+     "id": 386,
+     "en": "(to) do the cleaning",
+     "de": "putzen"
+    },
+    {
+     "id": 387,
+     "en": "(to) empty",
+     "de": "leeren"
+    },
+    {
+     "id": 388,
+     "en": "(to) explain sth. to sb.",
+     "de": "jm. etwas erklären"
+    },
+    {
+     "id": 389,
+     "en": "(to) feel",
+     "de": "fühlen"
+    },
+    {
+     "id": 390,
+     "en": "(to) fry",
+     "de": "frittieren, braten"
+    },
+    {
+     "id": 391,
+     "en": "(to) hang, hung",
+     "de": "hängen (2 Formen)"
+    },
+    {
+     "id": 392,
+     "en": "(to) load",
+     "de": "(be)laden"
+    },
+    {
+     "id": 393,
+     "en": "(to) make (money)",
+     "de": "(Geld) verdienen"
+    },
+    {
+     "id": 394,
+     "en": "(to) miss",
+     "de": "auslassen, verpassen"
+    },
+    {
+     "id": 395,
+     "en": "(to) need to do sth.",
+     "de": "etwas tun müssen"
+    },
+    {
+     "id": 396,
+     "en": "(to) pay (for sth.), paid",
+     "de": "etwas (be)zahlen"
+    },
+    {
+     "id": 397,
+     "en": "(to) taste",
+     "de": "schmecken, kosten (probieren)"
+    },
+    {
+     "id": 398,
+     "en": "(to) worry (about)",
+     "de": "sich Sorgen machen (wegen, um)"
+    },
+    {
+     "id": 399,
+     "en": "(to) worry sb.",
+     "de": "jn. beunruhigen"
+    },
+    {
+     "id": 400,
+     "en": "anybody, anyone",
+     "de": "irgendjemand, jede/r (beliebige)"
+    },
+    {
+     "id": 401,
+     "en": "anything",
+     "de": "(in Fragen) irgendwas"
+    },
+    {
+     "id": 402,
+     "en": "bagpipes (pl)",
+     "de": "Dudelsack"
+    },
+    {
+     "id": 403,
+     "en": "Bavaria",
+     "de": "Bayern"
+    },
+    {
+     "id": 404,
+     "en": "beef",
+     "de": "Rindfleisch"
+    },
+    {
+     "id": 405,
+     "en": "beetroot",
+     "de": "Rote Bete"
+    },
+    {
+     "id": 406,
+     "en": "boiled",
+     "de": "gekocht"
+    },
+    {
+     "id": 407,
+     "en": "bottom",
+     "de": "unteres Ende"
+    },
+    {
+     "id": 408,
+     "en": "buffet",
+     "de": "Bufett"
+    },
+    {
+     "id": 409,
+     "en": "business",
+     "de": "Geschäft, Betrieb"
+    },
+    {
+     "id": 410,
+     "en": "businessman, (pl) businessmen",
+     "de": "Geschäftsmann, -männer"
+    },
+    {
+     "id": 411,
+     "en": "businesswoman, (pl) businesswomen",
+     "de": "Geschäftsfrau, -frauen"
+    },
+    {
+     "id": 412,
+     "en": "busy",
+     "de": "(viel)beschäftigt"
+    },
+    {
+     "id": 413,
+     "en": "carrot",
+     "de": "Möhre, Karotte"
+    },
+    {
+     "id": 414,
+     "en": "charity",
+     "de": "wohltätige Organisation"
+    },
+    {
+     "id": 415,
+     "en": "cook",
+     "de": "Koch/Köchin"
+    },
+    {
+     "id": 416,
+     "en": "cream",
+     "de": "Sahne, Creme"
+    },
+    {
+     "id": 417,
+     "en": "dish",
+     "de": "Gericht"
+    },
+    {
+     "id": 418,
+     "en": "dishes (pl)",
+     "de": "Abwasch"
+    },
+    {
+     "id": 419,
+     "en": "dishwasher",
+     "de": "Geschirrspülmaschine"
+    },
+    {
+     "id": 420,
+     "en": "Do you believe in ghosts?",
+     "de": "Glaubst du an Geister?"
+    },
+    {
+     "id": 421,
+     "en": "Don't worry.",
+     "de": "Mach dir keine Sorgen."
+    },
+    {
+     "id": 422,
+     "en": "embarrassed",
+     "de": "verlegen"
+    },
+    {
+     "id": 423,
+     "en": "engineer",
+     "de": "Ingenieur/in, Techniker/in"
+    },
+    {
+     "id": 424,
+     "en": "everywhere",
+     "de": "überall"
+    },
+    {
+     "id": 425,
+     "en": "feeling",
+     "de": "Gefühl"
+    },
+    {
+     "id": 426,
+     "en": "fridge",
+     "de": "Kühlschrank"
+    },
+    {
+     "id": 427,
+     "en": "fried",
+     "de": "frittiert, gebraten"
+    },
+    {
+     "id": 428,
+     "en": "garlic",
+     "de": "Knoblauch"
+    },
+    {
+     "id": 429,
+     "en": "haggis",
+     "de": "schottisches Gericht (gefüllter Schafsmagen)"
+    },
+    {
+     "id": 430,
+     "en": "He's playing the bagpipes.",
+     "de": "Er spielt Dudelsack."
+    },
+    {
+     "id": 431,
+     "en": "health",
+     "de": "Gesundheit"
+    },
+    {
+     "id": 432,
+     "en": "healthy",
+     "de": "gesund"
+    },
+    {
+     "id": 433,
+     "en": "herself",
+     "de": "sich (selbst)"
+    },
+    {
+     "id": 434,
+     "en": "home-made",
+     "de": "hausgemacht, selbstgemacht"
+    },
+    {
+     "id": 435,
+     "en": "I don't want to worry you.",
+     "de": "Ich möchte dich nicht beunruhigen."
+    },
+    {
+     "id": 436,
+     "en": "I've hurt myself.",
+     "de": "Ich habe mir wehgetan / mich verletzt."
+    },
+    {
+     "id": 437,
+     "en": "in my opinion",
+     "de": "meiner Meinung nach"
+    },
+    {
+     "id": 438,
+     "en": "in my view",
+     "de": "meiner Ansicht nach"
+    },
+    {
+     "id": 439,
+     "en": "island",
+     "de": "Insel"
+    },
+    {
+     "id": 440,
+     "en": "lemonade",
+     "de": "Limonade"
+    },
+    {
+     "id": 441,
+     "en": "Let me pay for the pizza.",
+     "de": "Lass mich für die Pizza bezahlen."
+    },
+    {
+     "id": 442,
+     "en": "loch",
+     "de": "schottisches Wort für \"lake\" (See)"
+    },
+    {
+     "id": 443,
+     "en": "main course",
+     "de": "Hauptgericht"
+    },
+    {
+     "id": 444,
+     "en": "meatball",
+     "de": "Fleischbällchen, Frikadelle"
+    },
+    {
+     "id": 445,
+     "en": "Mexican",
+     "de": "mexikanisch, Mexikaner/in"
+    },
+    {
+     "id": 446,
+     "en": "not (...) anything",
+     "de": "nichts"
+    },
+    {
+     "id": 447,
+     "en": "not ... anybody",
+     "de": "niemand"
+    },
+    {
+     "id": 448,
+     "en": "not ... anywhere",
+     "de": "nirgends"
+    },
+    {
+     "id": 449,
+     "en": "oil",
+     "de": "Öl"
+    },
+    {
+     "id": 450,
+     "en": "oil rig",
+     "de": "Ölbohrinsel"
+    },
+    {
+     "id": 451,
+     "en": "opinion",
+     "de": "Meinung"
+    },
+    {
+     "id": 452,
+     "en": "oven",
+     "de": "Backofen"
+    },
+    {
+     "id": 453,
+     "en": "pan",
+     "de": "Pfanne"
+    },
+    {
+     "id": 454,
+     "en": "pea",
+     "de": "Erbse"
+    },
+    {
+     "id": 455,
+     "en": "pepper",
+     "de": "Paprika, Peperoni, Pfeffer"
+    },
+    {
+     "id": 456,
+     "en": "Please explain it to me.",
+     "de": "Erkläre es mir bitte."
+    },
+    {
+     "id": 457,
+     "en": "porridge",
+     "de": "Haferbrei"
+    },
+    {
+     "id": 458,
+     "en": "puzzled",
+     "de": "verwundert"
+    },
+    {
+     "id": 459,
+     "en": "raw",
+     "de": "roh"
+    },
+    {
+     "id": 460,
+     "en": "recipe",
+     "de": "(Koch-)Rezept"
+    },
+    {
+     "id": 461,
+     "en": "roast meat",
+     "de": "Braten"
+    },
+    {
+     "id": 462,
+     "en": "roasted",
+     "de": "gebraten, geröstet"
+    },
+    {
+     "id": 463,
+     "en": "salt",
+     "de": "Salz"
+    },
+    {
+     "id": 464,
+     "en": "sausage",
+     "de": "(Brat-, Bock-)Würstchen"
+    },
+    {
+     "id": 465,
+     "en": "Scotland",
+     "de": "Schottland"
+    },
+    {
+     "id": 466,
+     "en": "Scottish",
+     "de": "schottisch, aus Schottland"
+    },
+    {
+     "id": 467,
+     "en": "seconds (pl)",
+     "de": "Nachschlag"
+    },
+    {
+     "id": 468,
+     "en": "shopping list",
+     "de": "Einkaufsliste"
+    },
+    {
+     "id": 469,
+     "en": "side dish",
+     "de": "Beilage"
+    },
+    {
+     "id": 470,
+     "en": "simple",
+     "de": "einfach"
+    },
+    {
+     "id": 471,
+     "en": "since",
+     "de": "seit"
+    },
+    {
+     "id": 472,
+     "en": "somebody, someone",
+     "de": "jemand"
+    },
+    {
+     "id": 473,
+     "en": "somewhere",
+     "de": "irgendwo(hin)"
+    },
+    {
+     "id": 474,
+     "en": "soup",
+     "de": "Suppe"
+    },
+    {
+     "id": 475,
+     "en": "sour",
+     "de": "sauer"
+    },
+    {
+     "id": 476,
+     "en": "sour cream",
+     "de": "saure Sahne"
+    },
+    {
+     "id": 477,
+     "en": "spice",
+     "de": "Gewürz"
+    },
+    {
+     "id": 478,
+     "en": "sugar",
+     "de": "Zucker"
+    },
+    {
+     "id": 479,
+     "en": "surprised",
+     "de": "überrascht"
+    },
+    {
+     "id": 480,
+     "en": "taste",
+     "de": "Geschmack"
+    },
+    {
+     "id": 481,
+     "en": "tasty",
+     "de": "schmackhaft, lecker"
+    },
+    {
+     "id": 482,
+     "en": "the Highlands (pl)",
+     "de": "das schottische Hochland"
+    },
+    {
+     "id": 483,
+     "en": "top",
+     "de": "Spitze, das obere Ende"
+    },
+    {
+     "id": 484,
+     "en": "traditional",
+     "de": "traditionell"
+    },
+    {
+     "id": 485,
+     "en": "true",
+     "de": "wahr, richtig"
+    },
+    {
+     "id": 486,
+     "en": "umbrella",
+     "de": "(Regen-)Schirm"
+    },
+    {
+     "id": 487,
+     "en": "volunteer organisation",
+     "de": "Freiwilligenorganisation"
+    },
+    {
+     "id": 488,
+     "en": "washing",
+     "de": "Wäsche"
+    }
+   ]
+  },
+  {
+   "id": "Unit 5",
+   "name": "Unit 5",
+   "subtitle": "Unit 5",
+   "words": [
+    {
+     "id": 489,
+     "en": "(to) board",
+     "de": "an Bord gehen"
+    },
+    {
+     "id": 490,
+     "en": "(to) break a promise",
+     "de": "ein Versprechen brechen"
+    },
+    {
+     "id": 491,
+     "en": "(to) clean",
+     "de": "sauber machen, putzen"
+    },
+    {
+     "id": 492,
+     "en": "(to) collect (sth.)",
+     "de": "(etwas) sammeln"
+    },
+    {
+     "id": 493,
+     "en": "(to) complete (sth.)",
+     "de": "(etwas) beenden, (etwas) abschließen"
+    },
+    {
+     "id": 494,
+     "en": "(to) decide",
+     "de": "(sich) entscheiden"
+    },
+    {
+     "id": 495,
+     "en": "(to) destroy (sth.)",
+     "de": "(etwas) zerstören"
+    },
+    {
+     "id": 496,
+     "en": "(to) explain (sth. to sb.)",
+     "de": "(jm. etwas) erklären"
+    },
+    {
+     "id": 497,
+     "en": "(to) hide",
+     "de": "(sich) verstecken"
+    },
+    {
+     "id": 498,
+     "en": "(to) hope",
+     "de": "hoffen"
+    },
+    {
+     "id": 499,
+     "en": "(to) improve",
+     "de": "(sich) verbessern"
+    },
+    {
+     "id": 500,
+     "en": "(to) keep a promise",
+     "de": "ein Versprechen halten"
+    },
+    {
+     "id": 501,
+     "en": "(to) land",
+     "de": "landen"
+    },
+    {
+     "id": 502,
+     "en": "(to) make a decision",
+     "de": "eine Entscheidung treffen"
+    },
+    {
+     "id": 503,
+     "en": "(to) offer (sb. sth.)",
+     "de": "(jm. etwas) anbieten"
+    },
+    {
+     "id": 504,
+     "en": "(to) pack (a suitcase)",
+     "de": "packen (Koffer)"
+    },
+    {
+     "id": 505,
+     "en": "(to) prepare (sth.)",
+     "de": "(etwas) vorbereiten"
+    },
+    {
+     "id": 506,
+     "en": "(to) promise (sb. sth.)",
+     "de": "(jm. etwas) versprechen"
+    },
+    {
+     "id": 507,
+     "en": "(to) receive (sth.)",
+     "de": "(etwas) erhalten, bekommen"
+    },
+    {
+     "id": 508,
+     "en": "(to) send (sb. sth.)",
+     "de": "(jm. etwas) schicken, senden"
+    },
+    {
+     "id": 509,
+     "en": "(to) solve (sth.)",
+     "de": "(etwas) lösen (z.B. ein Problem)"
+    },
+    {
+     "id": 510,
+     "en": "(to) survive",
+     "de": "überleben"
+    },
+    {
+     "id": 511,
+     "en": "(to) unpack",
+     "de": "auspacken"
+    },
+    {
+     "id": 512,
+     "en": "(to) walk around",
+     "de": "umhergehen"
+    },
+    {
+     "id": 513,
+     "en": "(to) wash",
+     "de": "waschen"
+    },
+    {
+     "id": 514,
+     "en": "(to) wonder",
+     "de": "(sich) wundern, wissen wollen"
+    },
+    {
+     "id": 515,
+     "en": "airport",
+     "de": "Flughafen"
+    },
+    {
+     "id": 516,
+     "en": "already",
+     "de": "schon, bereits"
+    },
+    {
+     "id": 517,
+     "en": "American",
+     "de": "Amerikaner/in, amerikanisch"
+    },
+    {
+     "id": 518,
+     "en": "arrival",
+     "de": "Ankunft"
+    },
+    {
+     "id": 519,
+     "en": "Atlantic Ocean",
+     "de": "atlantischer Ozean, Atlantik"
+    },
+    {
+     "id": 520,
+     "en": "baggage",
+     "de": "Gepäck (US)"
+    },
+    {
+     "id": 521,
+     "en": "boarding card",
+     "de": "Bordkarte"
+    },
+    {
+     "id": 522,
+     "en": "cab",
+     "de": "Taxi (US)"
+    },
+    {
+     "id": 523,
+     "en": "California",
+     "de": "Kalifornien"
+    },
+    {
+     "id": 524,
+     "en": "Canada",
+     "de": "Kanada"
+    },
+    {
+     "id": 525,
+     "en": "candy",
+     "de": "Süßigkeit(en), Bonbon (US)"
+    },
+    {
+     "id": 526,
+     "en": "car park",
+     "de": "Parkplatz (UK)"
+    },
+    {
+     "id": 527,
+     "en": "careful",
+     "de": "vorsichtig"
+    },
+    {
+     "id": 528,
+     "en": "careless",
+     "de": "unvorsichtig"
+    },
+    {
+     "id": 529,
+     "en": "center",
+     "de": "Zentrum, Mitte"
+    },
+    {
+     "id": 530,
+     "en": "city center",
+     "de": "Stadtzentrum, Innenstadt"
+    },
+    {
+     "id": 531,
+     "en": "clean",
+     "de": "sauber"
+    },
+    {
+     "id": 532,
+     "en": "color",
+     "de": "Farbe"
+    },
+    {
+     "id": 533,
+     "en": "complete",
+     "de": "vollständig"
+    },
+    {
+     "id": 534,
+     "en": "courage",
+     "de": "Mut"
+    },
+    {
+     "id": 535,
+     "en": "courageous",
+     "de": "mutig"
+    },
+    {
+     "id": 536,
+     "en": "danger",
+     "de": "Gefahr"
+    },
+    {
+     "id": 537,
+     "en": "dangerous",
+     "de": "gefährlich"
+    },
+    {
+     "id": 538,
+     "en": "decision",
+     "de": "Entscheidung"
+    },
+    {
+     "id": 539,
+     "en": "departure",
+     "de": "Abflug"
+    },
+    {
+     "id": 540,
+     "en": "departure lounge",
+     "de": "Abflughalle"
+    },
+    {
+     "id": 541,
+     "en": "destruction",
+     "de": "Zerstörung"
+    },
+    {
+     "id": 542,
+     "en": "Drink a coke instead of a fanta.",
+     "de": "Trink eine Cola anstatt einer Fanta."
+    },
+    {
+     "id": 543,
+     "en": "east",
+     "de": "Osten, östlich, Ost-"
+    },
+    {
+     "id": 544,
+     "en": "ever",
+     "de": "jemals"
+    },
+    {
+     "id": 545,
+     "en": "explanation",
+     "de": "Erklärung"
+    },
+    {
+     "id": 546,
+     "en": "fare",
+     "de": "(U-Bahn-)Fahrpreis"
+    },
+    {
+     "id": 547,
+     "en": "favorite",
+     "de": "Lieblings-"
+    },
+    {
+     "id": 548,
+     "en": "flight",
+     "de": "Flug"
+    },
+    {
+     "id": 549,
+     "en": "flight attendant",
+     "de": "Flugbegleiter/in"
+    },
+    {
+     "id": 550,
+     "en": "fog",
+     "de": "Nebel"
+    },
+    {
+     "id": 551,
+     "en": "foggy",
+     "de": "neblig"
+    },
+    {
+     "id": 552,
+     "en": "forest fire",
+     "de": "Waldbrand"
+    },
+    {
+     "id": 553,
+     "en": "gas",
+     "de": "Benzin (US)"
+    },
+    {
+     "id": 554,
+     "en": "gas station",
+     "de": "Tankstelle (US)"
+    },
+    {
+     "id": 555,
+     "en": "gate",
+     "de": "Gate, Flugsteig"
+    },
+    {
+     "id": 556,
+     "en": "harbor",
+     "de": "Hafen"
+    },
+    {
+     "id": 557,
+     "en": "Have you done your homework yet?",
+     "de": "Hast du deine Hausaufgaben schon gemacht?"
+    },
+    {
+     "id": 558,
+     "en": "Have you ever been to New York?",
+     "de": "Warst du jemals in New York?"
+    },
+    {
+     "id": 559,
+     "en": "help",
+     "de": "Hilfe"
+    },
+    {
+     "id": 560,
+     "en": "helpful",
+     "de": "hilfreich"
+    },
+    {
+     "id": 561,
+     "en": "helpless",
+     "de": "hilflos"
+    },
+    {
+     "id": 562,
+     "en": "hero",
+     "de": "Held / Heldin"
+    },
+    {
+     "id": 563,
+     "en": "heroes",
+     "de": "Helden (Plural)"
+    },
+    {
+     "id": 564,
+     "en": "hiding place",
+     "de": "Versteck"
+    },
+    {
+     "id": 565,
+     "en": "highway",
+     "de": "Fernstraße (in den USA)"
+    },
+    {
+     "id": 566,
+     "en": "holiday",
+     "de": "Urlaub (UK)"
+    },
+    {
+     "id": 567,
+     "en": "hope",
+     "de": "Hoffnung"
+    },
+    {
+     "id": 568,
+     "en": "I haven't done my homework yet.",
+     "de": "Ich habe meine Hausaufgaben noch nicht gemacht."
+    },
+    {
+     "id": 569,
+     "en": "I wonder if...",
+     "de": "Ich frage mich, ob..."
+    },
+    {
+     "id": 570,
+     "en": "I've already done my homework.",
+     "de": "Ich habe meine Hausaufgaben schon gemacht."
+    },
+    {
+     "id": 571,
+     "en": "I've just written an email.",
+     "de": "Ich habe gerade eben eine E-Mail geschrieben."
+    },
+    {
+     "id": 572,
+     "en": "I've never been to Paris.",
+     "de": "Ich war noch nie in Paris."
+    },
+    {
+     "id": 573,
+     "en": "improvement",
+     "de": "Verbesserung"
+    },
+    {
+     "id": 574,
+     "en": "incomplete",
+     "de": "unvollständig"
+    },
+    {
+     "id": 575,
+     "en": "instead (of)",
+     "de": "(an)statt"
+    },
+    {
+     "id": 576,
+     "en": "island",
+     "de": "Insel"
+    },
+    {
+     "id": 577,
+     "en": "just",
+     "de": "gerade (eben)"
+    },
+    {
+     "id": 578,
+     "en": "just",
+     "de": "gerade eben, soeben"
+    },
+    {
+     "id": 579,
+     "en": "kilometer",
+     "de": "Kilometer"
+    },
+    {
+     "id": 580,
+     "en": "lorry",
+     "de": "LKW (UK)"
+    },
+    {
+     "id": 581,
+     "en": "luckily",
+     "de": "zum Glück"
+    },
+    {
+     "id": 582,
+     "en": "luggage",
+     "de": "Gepäck (UK)"
+    },
+    {
+     "id": 583,
+     "en": "national park",
+     "de": "Nationalpark"
+    },
+    {
+     "id": 584,
+     "en": "never",
+     "de": "noch nie, niemals"
+    },
+    {
+     "id": 585,
+     "en": "north",
+     "de": "Norden, nördlich, Nord-"
+    },
+    {
+     "id": 586,
+     "en": "north-east",
+     "de": "Nordosten, nordöstlich, Nordost-"
+    },
+    {
+     "id": 587,
+     "en": "north-west",
+     "de": "Nordwesten, nordwestlich, Nordwest-"
+    },
+    {
+     "id": 588,
+     "en": "nothing",
+     "de": "nichts"
+    },
+    {
+     "id": 589,
+     "en": "offer",
+     "de": "Angebot"
+    },
+    {
+     "id": 590,
+     "en": "Pacific Ocean",
+     "de": "pazifischer Ozean, Pazifik"
+    },
+    {
+     "id": 591,
+     "en": "painful",
+     "de": "schmerzhaft"
+    },
+    {
+     "id": 592,
+     "en": "painless",
+     "de": "schmerzlos"
+    },
+    {
+     "id": 593,
+     "en": "parking lot",
+     "de": "Parkplatz (US)"
+    },
+    {
+     "id": 594,
+     "en": "passenger",
+     "de": "Passagier/in"
+    },
+    {
+     "id": 595,
+     "en": "passport",
+     "de": "(Reise-)Pass"
+    },
+    {
+     "id": 596,
+     "en": "pavement",
+     "de": "Gehweg, Bürgersteig"
+    },
+    {
+     "id": 597,
+     "en": "petrol",
+     "de": "Benzin (UK)"
+    },
+    {
+     "id": 598,
+     "en": "petrol station",
+     "de": "Tankstelle (UK)"
+    },
+    {
+     "id": 599,
+     "en": "pilot",
+     "de": "Pilot/in"
+    },
+    {
+     "id": 600,
+     "en": "preparation",
+     "de": "Vorbereitung"
+    },
+    {
+     "id": 601,
+     "en": "prison",
+     "de": "Gefängnis"
+    },
+    {
+     "id": 602,
+     "en": "promise",
+     "de": "Versprechen"
+    },
+    {
+     "id": 603,
+     "en": "recently",
+     "de": "in letzter Zeit, neulich"
+    },
+    {
+     "id": 604,
+     "en": "silly",
+     "de": "dumm, albern"
+    },
+    {
+     "id": 605,
+     "en": "solution",
+     "de": "Lösung"
+    },
+    {
+     "id": 606,
+     "en": "south",
+     "de": "Süden, südlich, Süd-"
+    },
+    {
+     "id": 607,
+     "en": "south-east",
+     "de": "Südosten, südöstlich, Südost-"
+    },
+    {
+     "id": 608,
+     "en": "south-west",
+     "de": "Südwesten, südwestlich, Südwest-"
+    },
+    {
+     "id": 609,
+     "en": "state",
+     "de": "(Bundes-)Staat"
+    },
+    {
+     "id": 610,
+     "en": "storm",
+     "de": "Sturm"
+    },
+    {
+     "id": 611,
+     "en": "stormy",
+     "de": "stürmisch"
+    },
+    {
+     "id": 612,
+     "en": "stupid",
+     "de": "dumm"
+    },
+    {
+     "id": 613,
+     "en": "success",
+     "de": "Erfolg"
+    },
+    {
+     "id": 614,
+     "en": "successful",
+     "de": "erfolgreich"
+    },
+    {
+     "id": 615,
+     "en": "suitcase",
+     "de": "Koffer"
+    },
+    {
+     "id": 616,
+     "en": "survival",
+     "de": "Überleben"
+    },
+    {
+     "id": 617,
+     "en": "survivor",
+     "de": "(überlebendes) Tier, Überlebende(r)"
+    },
+    {
+     "id": 618,
+     "en": "sweets",
+     "de": "Süßigkeit(en), Bonbon (UK)"
+    },
+    {
+     "id": 619,
+     "en": "taxi",
+     "de": "Taxi (UK)"
+    },
+    {
+     "id": 620,
+     "en": "truck",
+     "de": "LKW (US)"
+    },
+    {
+     "id": 621,
+     "en": "unfortunately",
+     "de": "unglücklicherweise"
+    },
+    {
+     "id": 622,
+     "en": "useful",
+     "de": "nützlich"
+    },
+    {
+     "id": 623,
+     "en": "useless",
+     "de": "nutzlos"
+    },
+    {
+     "id": 624,
+     "en": "vacation",
+     "de": "Urlaub (US)"
+    },
+    {
+     "id": 625,
+     "en": "wedding",
+     "de": "Hochzeit"
+    },
+    {
+     "id": 626,
+     "en": "wedding present",
+     "de": "Hochzeitsgeschenk"
+    },
+    {
+     "id": 627,
+     "en": "west",
+     "de": "Westen, westlich, West-"
+    },
+    {
+     "id": 628,
+     "en": "wonderful",
+     "de": "wunderbar"
+    },
+    {
+     "id": 629,
+     "en": "yet",
+     "de": "(bis) jetzt, schon, noch"
+    }
+   ]
+  },
+  {
+   "id": "Unit 6",
+   "name": "Unit 6",
+   "subtitle": "Unit 6",
+   "words": [
+    {
+     "id": 630,
+     "en": "(not) at all",
+     "de": "überhaupt (nicht)"
+    },
+    {
+     "id": 631,
+     "en": "(school) year",
+     "de": "Klasse, Schuljahr"
+    },
+    {
+     "id": 632,
+     "en": "(the) next time",
+     "de": "nächstes Mal"
+    },
+    {
+     "id": 633,
+     "en": "(to) be ill",
+     "de": "krank sein"
+    },
+    {
+     "id": 634,
+     "en": "(to) be sick",
+     "de": "sich übergeben"
+    },
+    {
+     "id": 635,
+     "en": "(to) beat, beat, beaten",
+     "de": "schlagen, besiegen (3 Formen)"
+    },
+    {
+     "id": 636,
+     "en": "(to) cheer",
+     "de": "jubeln, (Sportler/innen) anfeuern"
+    },
+    {
+     "id": 637,
+     "en": "(to) cough",
+     "de": "husten"
+    },
+    {
+     "id": 638,
+     "en": "(to) do research",
+     "de": "recherchieren"
+    },
+    {
+     "id": 639,
+     "en": "(to) get wet",
+     "de": "nass werden"
+    },
+    {
+     "id": 640,
+     "en": "(to) hang out",
+     "de": "rumhängen, abhängen"
+    },
+    {
+     "id": 641,
+     "en": "(to) have a headache",
+     "de": "Kopfschmerzen haben"
+    },
+    {
+     "id": 642,
+     "en": "(to) have a picnic",
+     "de": "ein Picknick machen"
+    },
+    {
+     "id": 643,
+     "en": "(to) have a stomach ache",
+     "de": "Bauchschmerzen haben"
+    },
+    {
+     "id": 644,
+     "en": "(to) have got",
+     "de": "haben"
+    },
+    {
+     "id": 645,
+     "en": "(to) have to do sth.",
+     "de": "etwas tun müssen"
+    },
+    {
+     "id": 646,
+     "en": "(to) look ill",
+     "de": "krank aussehen"
+    },
+    {
+     "id": 647,
+     "en": "(to) lose, lost, lost",
+     "de": "verlieren (3 Formen)"
+    },
+    {
+     "id": 648,
+     "en": "(to) practice",
+     "de": "üben, trainieren"
+    },
+    {
+     "id": 649,
+     "en": "(to) practise",
+     "de": "üben, trainieren"
+    },
+    {
+     "id": 650,
+     "en": "(to) present",
+     "de": "präsentieren, vorstellen"
+    },
+    {
+     "id": 651,
+     "en": "(to) score",
+     "de": "(Punkt/Tor/Treffer) erzielen"
+    },
+    {
+     "id": 652,
+     "en": "(to) sound",
+     "de": "klingen"
+    },
+    {
+     "id": 653,
+     "en": "(to) speak clearly",
+     "de": "deutlich sprechen"
+    },
+    {
+     "id": 654,
+     "en": "(to) support",
+     "de": "unterstützen"
+    },
+    {
+     "id": 655,
+     "en": "(to) teach, taught, taught",
+     "de": "lehren, unterrichten (3 Formen)"
+    },
+    {
+     "id": 656,
+     "en": "a sick child",
+     "de": "ein krankes Kind"
+    },
+    {
+     "id": 657,
+     "en": "a sore throat",
+     "de": "Halsschmerzen"
+    },
+    {
+     "id": 658,
+     "en": "after-school activities",
+     "de": "AGs (freiwillige Veranstaltungen in der Schule nach Unterrichtschluss)"
+    },
+    {
+     "id": 659,
+     "en": "as a result",
+     "de": "folglich, demzufolge"
+    },
+    {
+     "id": 660,
+     "en": "Austria",
+     "de": "Österreich"
+    },
+    {
+     "id": 661,
+     "en": "awesome",
+     "de": "klasse, stark, großartig"
+    },
+    {
+     "id": 662,
+     "en": "backpack",
+     "de": "Rucksack"
+    },
+    {
+     "id": 663,
+     "en": "baggy",
+     "de": "weit (geschnitten) (Kleidung)"
+    },
+    {
+     "id": 664,
+     "en": "baggy pants",
+     "de": "Schlabberhose"
+    },
+    {
+     "id": 665,
+     "en": "before",
+     "de": "zuvor, vorher"
+    },
+    {
+     "id": 666,
+     "en": "before lunch",
+     "de": "vor dem Mittagessen"
+    },
+    {
+     "id": 667,
+     "en": "before you go",
+     "de": "bevor du gehst"
+    },
+    {
+     "id": 668,
+     "en": "body",
+     "de": "Körper"
+    },
+    {
+     "id": 669,
+     "en": "both",
+     "de": "beide"
+    },
+    {
+     "id": 670,
+     "en": "break",
+     "de": "Pause"
+    },
+    {
+     "id": 671,
+     "en": "camp",
+     "de": "(Zelt-)Lager"
+    },
+    {
+     "id": 672,
+     "en": "chance",
+     "de": "Chance, Gelegenheit"
+    },
+    {
+     "id": 673,
+     "en": "chart",
+     "de": "Diagramm, Tabelle"
+    },
+    {
+     "id": 674,
+     "en": "cheerleading",
+     "de": "Cheerleading (Anfeuern der Mannschaften bei Sportereignissen)"
+    },
+    {
+     "id": 675,
+     "en": "Christmas",
+     "de": "Weihnachten"
+    },
+    {
+     "id": 676,
+     "en": "clear",
+     "de": "klar, deutlich"
+    },
+    {
+     "id": 677,
+     "en": "clear directions",
+     "de": "deutliche Anweisungen"
+    },
+    {
+     "id": 678,
+     "en": "coach",
+     "de": "Trainer/in"
+    },
+    {
+     "id": 679,
+     "en": "cough",
+     "de": "Husten"
+    },
+    {
+     "id": 680,
+     "en": "day out, (pl) days out",
+     "de": "(Tages-)Ausflug, (Tages-)Ausflüge"
+    },
+    {
+     "id": 681,
+     "en": "desert",
+     "de": "Wüste"
+    },
+    {
+     "id": 682,
+     "en": "dessert",
+     "de": "Nachspeise"
+    },
+    {
+     "id": 683,
+     "en": "dogs' home",
+     "de": "Hundeheim"
+    },
+    {
+     "id": 684,
+     "en": "ear",
+     "de": "Ohr"
+    },
+    {
+     "id": 685,
+     "en": "Easter",
+     "de": "Ostern"
+    },
+    {
+     "id": 686,
+     "en": "even",
+     "de": "sogar, selbst"
+    },
+    {
+     "id": 687,
+     "en": "everybody / everyone else",
+     "de": "alle anderen, jede/r andere"
+    },
+    {
+     "id": 688,
+     "en": "face",
+     "de": "Gesicht"
+    },
+    {
+     "id": 689,
+     "en": "final",
+     "de": "Finale"
+    },
+    {
+     "id": 690,
+     "en": "finger",
+     "de": "Finger"
+    },
+    {
+     "id": 691,
+     "en": "foot, (pl) feet",
+     "de": "Fuß, Füße"
+    },
+    {
+     "id": 692,
+     "en": "football",
+     "de": "American Football"
+    },
+    {
+     "id": 693,
+     "en": "football",
+     "de": "Fußball"
+    },
+    {
+     "id": 694,
+     "en": "grade",
+     "de": "(Schul-)Note"
+    },
+    {
+     "id": 695,
+     "en": "grade",
+     "de": "Klasse, Schuljahr"
+    },
+    {
+     "id": 696,
+     "en": "graph",
+     "de": "Graph, Schaubild"
+    },
+    {
+     "id": 697,
+     "en": "half",
+     "de": "halbe(r, s)"
+    },
+    {
+     "id": 698,
+     "en": "half an apple",
+     "de": "ein halber Apfel"
+    },
+    {
+     "id": 699,
+     "en": "half an hour",
+     "de": "eine halbe Stunde"
+    },
+    {
+     "id": 700,
+     "en": "half-time show",
+     "de": "Show in der Halbzeitpause"
+    },
+    {
+     "id": 701,
+     "en": "Hispanic",
+     "de": "hispanisch (lateinamerikanischer Herkunft)"
+    },
+    {
+     "id": 702,
+     "en": "I feel sick.",
+     "de": "Mir ist schlecht."
+    },
+    {
+     "id": 703,
+     "en": "I have a headache.",
+     "de": "Ich habe Kopfschmerzen."
+    },
+    {
+     "id": 704,
+     "en": "I have a sore throat.",
+     "de": "Ich habe Halsschmerzen."
+    },
+    {
+     "id": 705,
+     "en": "I have a stomach ache.",
+     "de": "Ich habe Bauchschmerzen."
+    },
+    {
+     "id": 706,
+     "en": "I have a temperature.",
+     "de": "Ich habe Fieber."
+    },
+    {
+     "id": 707,
+     "en": "I'm going to be sick.",
+     "de": "Ich muss mich übergeben."
+    },
+    {
+     "id": 708,
+     "en": "I'm going to play",
+     "de": "ich werde ... spielen"
+    },
+    {
+     "id": 709,
+     "en": "I've never heard this song before.",
+     "de": "Dieses Lied habe ich vorher noch nie gehört."
+    },
+    {
+     "id": 710,
+     "en": "Independence Day",
+     "de": "(US-amerikanischer) Unabhängigkeitstag (4. Juli)"
+    },
+    {
+     "id": 711,
+     "en": "it sounds fun",
+     "de": "es klingt, als ob es Spaß macht"
+    },
+    {
+     "id": 712,
+     "en": "leg",
+     "de": "Bein"
+    },
+    {
+     "id": 713,
+     "en": "lesson",
+     "de": "(Unterrichts-)Stunde"
+    },
+    {
+     "id": 714,
+     "en": "listener",
+     "de": "Zuhörer/in"
+    },
+    {
+     "id": 715,
+     "en": "medicine (no pl)",
+     "de": "Medizin, Medikament(e)"
+    },
+    {
+     "id": 716,
+     "en": "Memorial Day",
+     "de": "Gedenktag (zur Erinnerung an Kriegsgefallene und -opfer)"
+    },
+    {
+     "id": 717,
+     "en": "mouth",
+     "de": "Mund"
+    },
+    {
+     "id": 718,
+     "en": "niece",
+     "de": "Nichte"
+    },
+    {
+     "id": 719,
+     "en": "No way!",
+     "de": "Auf keinen Fall!"
+    },
+    {
+     "id": 720,
+     "en": "nose",
+     "de": "Nase"
+    },
+    {
+     "id": 721,
+     "en": "not even",
+     "de": "nicht einmal"
+    },
+    {
+     "id": 722,
+     "en": "nurse",
+     "de": "Krankenpfleger/in"
+    },
+    {
+     "id": 723,
+     "en": "pants",
+     "de": "(eine) Hose"
+    },
+    {
+     "id": 724,
+     "en": "parade",
+     "de": "Parade, Umzug"
+    },
+    {
+     "id": 725,
+     "en": "period",
+     "de": "(Unterrichts-)Stunde"
+    },
+    {
+     "id": 726,
+     "en": "picnic",
+     "de": "Picknick"
+    },
+    {
+     "id": 727,
+     "en": "pie chart",
+     "de": "Tortendiagramm"
+    },
+    {
+     "id": 728,
+     "en": "practice",
+     "de": "Übung, Erfahrung"
+    },
+    {
+     "id": 729,
+     "en": "public holiday",
+     "de": "öffentlicher/gesetzlicher Feiertag"
+    },
+    {
+     "id": 730,
+     "en": "recess",
+     "de": "Pause"
+    },
+    {
+     "id": 731,
+     "en": "research",
+     "de": "Forschung(en), Recherche(n)"
+    },
+    {
+     "id": 732,
+     "en": "result",
+     "de": "Ergebnis"
+    },
+    {
+     "id": 733,
+     "en": "schedule",
+     "de": "Stundenplan"
+    },
+    {
+     "id": 734,
+     "en": "score",
+     "de": "Spiel-/Punktestand, (im Spiel/Sport erzielter) Punkt"
+    },
+    {
+     "id": 735,
+     "en": "sick",
+     "de": "krank"
+    },
+    {
+     "id": 736,
+     "en": "soccer",
+     "de": "Fußball"
+    },
+    {
+     "id": 737,
+     "en": "sound",
+     "de": "Geräusch, Klang, Laut"
+    },
+    {
+     "id": 738,
+     "en": "special",
+     "de": "Sonderausgabe (Magazin), Sondersendung (Fernsehen)"
+    },
+    {
+     "id": 739,
+     "en": "stomach",
+     "de": "Bauch, Magen"
+    },
+    {
+     "id": 740,
+     "en": "summer camp",
+     "de": "Ferienlager (im Sommer)"
+    },
+    {
+     "id": 741,
+     "en": "table",
+     "de": "Tabelle"
+    },
+    {
+     "id": 742,
+     "en": "temperature",
+     "de": "Temperatur, Fieber"
+    },
+    {
+     "id": 743,
+     "en": "Thanksgiving Day",
+     "de": "Erntedankfest"
+    },
+    {
+     "id": 744,
+     "en": "the last time",
+     "de": "das letzte Mal"
+    },
+    {
+     "id": 745,
+     "en": "this time",
+     "de": "dieses Mal"
+    },
+    {
+     "id": 746,
+     "en": "three times",
+     "de": "dreimal"
+    },
+    {
+     "id": 747,
+     "en": "three times a week",
+     "de": "dreimal pro Woche"
+    },
+    {
+     "id": 748,
+     "en": "throat",
+     "de": "Hals"
+    },
+    {
+     "id": 749,
+     "en": "time",
+     "de": "Mal"
+    },
+    {
+     "id": 750,
+     "en": "timetable",
+     "de": "Stundenplan"
+    },
+    {
+     "id": 751,
+     "en": "turkey",
+     "de": "Truthahn, Pute, Putenfleisch"
+    },
+    {
+     "id": 752,
+     "en": "Well, ...",
+     "de": "Nun, ... / Also, ... / Na ja, ..."
+    },
+    {
+     "id": 753,
+     "en": "What's wrong?",
+     "de": "Was fehlt dir/Ihnen? (beim Arzt)"
+    },
+    {
+     "id": 754,
+     "en": "whole",
+     "de": "ganze(r, s)"
+    },
+    {
+     "id": 755,
+     "en": "Would you like anything else?",
+     "de": "Möchten Sie sonst noch etwas?"
     }
    ]
   }

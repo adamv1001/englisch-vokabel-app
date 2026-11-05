@@ -50,9 +50,14 @@ async function layout(page, tag) {
       await page.reload({ waitUntil: "load" });
       await page.waitForSelector(".unit");
       ok(await page.evaluate(() => !!(navigator.serviceWorker && navigator.serviceWorker.controller)), tag + ": SW kontrolliert");
-      ok((await page.$$(".unit")).length >= 2, tag + ": Units sichtbar");
+      ok((await page.$$(".unit")).length === 6, tag + ": 6 Units sichtbar");
+      const nWords = await page.evaluate(() => window.__vok && window.__vok.S ? document.querySelectorAll(".unit .n") : []);
+      const sums = await page.evaluate(() => Array.from(document.querySelectorAll(".unit .n")).map(e => +e.textContent));
+      ok(sums.reduce((a,b)=>a+b,0) === 756, tag + ": 756 Wörter auf Kacheln (" + sums + ")");
+      ok(await page.isVisible("#src-note") || await page.$("details"), tag + ": Info-Hinweis");
       await layout(page, tag + " Start");
-      if (bname === "chromium" && dev === "iphone15") await page.screenshot({ path: "/workspace/vok_iphone_start.png" });
+      if (bname === "chromium" && dev === "iphone15") await page.screenshot({ path: "/workspace/vok_iphone_start.png", fullPage: true });
+      if (bname === "chromium" && dev === "ipad13") await page.screenshot({ path: "/workspace/vok_ipad.png", fullPage: true });
 
       // Unit 1 only
       await page.click('.unit[data-u="Unit 2"]'); // toggle off if on
@@ -71,7 +76,6 @@ async function layout(page, tag) {
       await page.waitForSelector(".opt");
       await layout(page, tag + " MC");
       if (bname === "chromium" && dev === "iphone15") await page.screenshot({ path: "/workspace/vok_iphone_frage.png" });
-      if (bname === "chromium" && dev === "ipad13") await page.screenshot({ path: "/workspace/vok_ipad.png" });
       // wrong then right
       const wrongI = await page.evaluate(() => {
         const r = window.__vok.S.round[window.__vok.S.i];
@@ -174,7 +178,7 @@ async function layout(page, tag) {
       try {
         await page.reload({ waitUntil: "load" });
         await page.waitForSelector(".unit");
-        off = (await page.$$(".unit")).length >= 2;
+        off = (await page.$$(".unit")).length === 6;
         await page.click("#b-start");
         off = off && (await page.isVisible("#q-word") || await page.isVisible("#match") || await page.isVisible("#flip"));
       } catch (e) { off = false; }

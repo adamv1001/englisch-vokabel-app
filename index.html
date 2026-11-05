@@ -34,9 +34,13 @@ h1{font-size:28px;margin:8px 0 2px;text-align:center;color:var(--blau)}
 .btn.klein{min-height:46px;font-size:17px}.btn:disabled{opacity:.45}
 .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .units{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.unit{border:3px solid #d5dde8;border-radius:18px;background:#fff;padding:14px 10px;min-height:88px;font:inherit;font-weight:700;cursor:pointer;text-align:center;touch-action:manipulation;color:var(--text)}
+.unit{border:3px solid #d5dde8;border-radius:18px;background:#fff;padding:12px 8px;min-height:96px;font:inherit;font-weight:700;cursor:pointer;text-align:center;touch-action:manipulation;color:var(--text)}
 .unit.on{border-color:var(--rot);background:#ffe8ec;box-shadow:0 0 0 2px rgba(200,16,46,.2)}
-.unit .n{display:block;font-size:28px;color:var(--rot)}.unit small{display:block;color:var(--muted);font-weight:600;margin-top:4px}
+.unit .n{display:block;font-size:26px;color:var(--rot);line-height:1.1}
+.unit .ttl{display:block;font-size:17px;margin-top:2px}
+.unit .subu{display:block;color:var(--blau);font-weight:600;font-size:13px;margin-top:2px;line-height:1.2}
+.unit small{display:block;color:var(--muted);font-weight:600;margin-top:4px;font-size:13px}
+.note-src{font-size:13px;color:var(--muted);text-align:center;margin:8px 4px 0;line-height:1.35}
 .seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .seg.vier{grid-template-columns:repeat(2,minmax(0,1fr))}
 .seg button{min-height:52px;border:3px solid #d5dde8;border-radius:14px;background:#fff;font:inherit;font-weight:700;font-size:16px;cursor:pointer;color:var(--text);padding:8px;touch-action:manipulation}
@@ -84,14 +88,16 @@ h1{font-size:28px;margin:8px 0 2px;text-align:center;color:var(--blau)}
 #dlg{position:fixed;inset:0;background:rgba(20,30,50,.55);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
 #dlg.on{display:flex}#dlg .box{background:#fff;border-radius:22px;padding:20px;max-width:420px;width:100%;text-align:center;font-weight:700;font-size:20px}
 @media (min-width:700px){body{font-size:22px}.wrap{max-width:900px}h1{font-size:36px}.prompt{font-size:42px}.opt{min-height:80px;font-size:28px}.btn{min-height:64px;font-size:24px}
- .unit{min-height:110px}.unit .n{font-size:36px}.ansrow input{min-height:68px;font-size:28px}.mic{min-width:68px;min-height:68px;font-size:30px}
+ .units{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .unit{min-height:120px}.unit .n{font-size:34px}.unit .ttl{font-size:20px}.unit .subu{font-size:15px}
+ .ansrow input{min-height:68px;font-size:28px}.mic{min-width:68px;min-height:68px;font-size:30px}
  .cardflip{height:280px}.cardflip .face{font-size:40px}.match .tile{min-height:80px;font-size:22px}.seg button{min-height:64px;font-size:19px}}
 .note-big{font-size:72px;font-weight:900;color:var(--rot);text-align:center;line-height:1;margin:8px 0}
 .rev{list-style:none;padding:0;margin:8px 0;max-height:50vh;overflow:auto}
 .rev li{padding:10px;border-radius:12px;margin:6px 0;font-size:16px}
 .rev li.ok{background:#dcf7e6}.rev li.half{background:#fff3d6}.rev li.bad{background:#fde4dc}
 .timer{font-size:20px;font-weight:800;color:var(--rot);text-align:center}
-@media (min-width:1100px){.wrap{max-width:1000px}.units{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1100px){.wrap{max-width:1000px}}
 </style>
 </head>
 <body>
@@ -154,6 +160,10 @@ h1{font-size:28px;margin:8px 0 2px;text-align:center;color:var(--blau)}
   </div>
   <button type="button" class="btn" id="b-start">🚀 Los geht's</button>
   <p class="small" id="speech-info"></p>
+  <details style="margin-top:10px">
+   <summary class="lab" style="cursor:pointer">ℹ️ Info</summary>
+   <p class="note-src" id="src-note">Wortlisten nach Community-Listen zu Go Ahead 6; Abweichungen zum Buch möglich.</p>
+  </details>
  </div>
 </section>
 
@@ -233,7 +243,8 @@ function buildHome() {
   var h = "";
   UNITS.forEach(function (u) {
     var st = unitStats(u.id); var on = S.units.indexOf(u.id) >= 0 ? " on" : "";
-    h += '<button type="button" class="unit' + on + '" data-u="' + esc(u.id) + '"><span class="n">' + st.total + '</span>' + esc(u.name) +
+    h += '<button type="button" class="unit' + on + '" data-u="' + esc(u.id) + '"><span class="n">' + st.total + '</span><span class="ttl">' + esc(u.name) + '</span>' +
+      (u.subtitle ? '<span class="subu">' + esc(u.subtitle) + '</span>' : '') +
       '<small>' + st.known + ' gut gelernt</small><div class="prog"><div class="track"><div class="fill" style="width:' + (st.total ? Math.round(100 * st.known / st.total) : 0) + '%"></div></div></div></button>';
   });
   $("units").innerHTML = h;
@@ -798,10 +809,12 @@ $("b-quit").onclick = function () {
 
 function boot(data) {
   DATA = Vok.loadVocab(data); WORDS = DATA.words; UNITS = DATA.units;
-  S.units = store.get("units", UNITS.map(function (u) { return u.id; }));
+  S.units = store.get("units", [UNITS[0].id]);
   // nur existierende Units behalten
   S.units = S.units.filter(function (u) { return UNITS.some(function (x) { return x.id === u; }); });
   if (!S.units.length) S.units = [UNITS[0].id];
+  var sn = $("src-note");
+  if (sn && data.source_note) sn.textContent = data.source_note;
   buildHome(); show("s-home");
 }
 

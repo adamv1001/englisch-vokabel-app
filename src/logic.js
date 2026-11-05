@@ -42,23 +42,41 @@ function splitMeanings(de) {
   // Komma-getrennte Bedeutungen; Ellipsen "…" behalten
   return String(de).split(/\s*,\s*/).map(function (p) { return p.trim(); }).filter(Boolean);
 }
+function splitAlts(s) {
+  // Alternativen mit " / " (nicht Detektiv/in – das ist Geschlecht)
+  // Nur splitten, wenn Leerzeichen um den Slash sind oder beidseitig Wörter
+  var parts = String(s).split(/\s+\/\s+/);
+  if (parts.length > 1) return parts.map(function (p) { return p.trim(); }).filter(Boolean);
+  return [String(s).trim()];
+}
 function variants(word, side) {
   // Alle akzeptablen Schreibweisen für eine Seite (en oder de)
   var base = stripDecor(word);
   var list = [base];
-  if (side === "de") {
-    splitMeanings(base).forEach(function (m) {
-      list.push(m);
-      expandParens(m).forEach(function (v) { list.push(v); });
-      list.push(stripGender(m));
-      list.push(stripParens(stripGender(m)));
+  function addForm(m) {
+    list.push(m);
+    expandParens(m).forEach(function (v) { list.push(v); });
+    list.push(stripGender(m));
+    list.push(stripParens(stripGender(m)));
+    // Alternativen "a / b"
+    splitAlts(m).forEach(function (a) {
+      list.push(a);
+      expandParens(a).forEach(function (v) { list.push(v); });
+      list.push(stripGender(a));
+      list.push(stripParens(stripGender(a)));
     });
+  }
+  if (side === "de") {
+    splitMeanings(base).forEach(addForm);
   } else {
+    splitAlts(base).forEach(function (m) { addForm(m); });
     expandParens(base).forEach(function (v) { list.push(v); });
     // (to) war schon entfernt; falls Original ohne (to) war, Variante mit (to)
     if (/^\(to\)/i.test(normSpace(word))) list.push(stripDecor(word));
     // trailing "..."
     list.push(base.replace(/\s*\.\.\.\s*$/, "").trim());
+    // "forget, forgot" → erste Form
+    if (base.indexOf(",") >= 0) list.push(base.split(",")[0].trim());
   }
   // Ellipsis-Varianten
   var more = [];
@@ -122,19 +140,56 @@ function shuffle(a) {
   }
   return a;
 }
+function guessKind(text) {
+  var raw = String(text || "").trim();
+  var s = stripDecor(raw);
+  if (/^\(to\)/i.test(raw)) return "verb";
+  if (/\?$/.test(s) || /\.\.\.$/.test(s) || /…$/.test(s)) return "phrase";
+  if (/^(I |you |he |she |we |they |you'll|you will |not )/i.test(s)) return "phrase";
+  return "other";
+}
 function pickDistractors(pool, word, side, n) {
   var target = side === "en" ? word.en : word.de;
   var opts = [], used = {};
   used[lower(target)] = 1;
-  shuffle(pool).forEach(function (w) {
+  var wantKind = guessKind(side === "en" ? word.en : word.de);
+  var tlen = stripDecor(target).length;
+  function score(w) {
+    var v = side === "en" ? w.en : w.de;
+    var sc = 0;
+    if (w.unit === word.unit) sc += 50;
+    var k = guessKind(side === "en" ? w.en : w.de);
+    if (k === wantKind) sc += 20;
+    var dl = Math.abs(stripDecor(v).length - tlen);
+    sc += Math.max(0, 15 - dl);
+    return sc;
+  }
+  var ranked = pool.filter(function (w) { return w.id !== word.id; }).slice();
+  ranked.sort(function (a, b) {
+    var ds = score(b) - score(a);
+    if (ds) return ds;
+    return Math.random() - 0.5;
+  });
+  // leicht mischen innerhalb ähnlicher Scores: nimm Top-Kandidaten und shuffle
+  var top = ranked.slice(0, Math.max(n * 6, 12));
+  shuffle(top).forEach(function (w) {
     if (opts.length >= n) return;
-    if (w.id === word.id) return;
     var v = side === "en" ? w.en : w.de;
     var k = lower(v);
     if (used[k]) return;
     used[k] = 1; opts.push(v);
   });
-  // falls Pool zu klein, mit Platzhaltern auffüllen (sollte bei 40+ nicht passieren)
+  // Rest aus ganzem Pool
+  if (opts.length < n) {
+    shuffle(pool).forEach(function (w) {
+      if (opts.length >= n) return;
+      if (w.id === word.id) return;
+      var v = side === "en" ? w.en : w.de;
+      var k = lower(v);
+      if (used[k]) return;
+      used[k] = 1; opts.push(v);
+    });
+  }
   while (opts.length < n) opts.push(side === "en" ? ("word" + opts.length) : ("Wort" + opts.length));
   return opts;
 }

@@ -1,4 +1,4 @@
-const CACHE = "englisch-vokabeln-v2";
+const CACHE = "englisch-vokabeln-v3";
 const ASSETS = ["./", "./index.html", "./vocab.json", "./manifest.webmanifest", "./src/logic.js", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }));
