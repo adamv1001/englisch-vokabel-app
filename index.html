@@ -86,6 +86,11 @@ h1{font-size:28px;margin:8px 0 2px;text-align:center;color:var(--blau)}
 @media (min-width:700px){body{font-size:22px}.wrap{max-width:900px}h1{font-size:36px}.prompt{font-size:42px}.opt{min-height:80px;font-size:28px}.btn{min-height:64px;font-size:24px}
  .unit{min-height:110px}.unit .n{font-size:36px}.ansrow input{min-height:68px;font-size:28px}.mic{min-width:68px;min-height:68px;font-size:30px}
  .cardflip{height:280px}.cardflip .face{font-size:40px}.match .tile{min-height:80px;font-size:22px}.seg button{min-height:64px;font-size:19px}}
+.note-big{font-size:72px;font-weight:900;color:var(--rot);text-align:center;line-height:1;margin:8px 0}
+.rev{list-style:none;padding:0;margin:8px 0;max-height:50vh;overflow:auto}
+.rev li{padding:10px;border-radius:12px;margin:6px 0;font-size:16px}
+.rev li.ok{background:#dcf7e6}.rev li.half{background:#fff3d6}.rev li.bad{background:#fde4dc}
+.timer{font-size:20px;font-weight:800;color:var(--rot);text-align:center}
 @media (min-width:1100px){.wrap{max-width:1000px}.units{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
 </head>
@@ -118,7 +123,29 @@ h1{font-size:28px;margin:8px 0 2px;text-align:center;color:var(--blau)}
    <button type="button" data-v="speak">🎤 Sprechen</button>
    <button type="button" data-v="cards">🃏 Karten</button>
    <button type="button" data-v="match">🔗 Zuordnen</button>
+   <button type="button" data-v="test">📝 Vokabeltest</button>
   </div>
+  <div id="test-opts" hidden>
+   <span class="lab">Test: Anzahl Wörter</span>
+   <div class="seg" id="testlen">
+    <button type="button" data-v="10" class="on">10</button>
+    <button type="button" data-v="20">20</button>
+    <button type="button" data-v="30">30</button>
+   </div>
+   <label class="lab" style="display:flex;align-items:center;gap:10px;font-weight:700">
+    <input type="checkbox" id="timer-on" style="width:22px;height:22px"> Timer (optional)
+   </label>
+   <div class="seg" id="timermin" hidden>
+    <button type="button" data-v="5" class="on">5 Min</button>
+    <button type="button" data-v="10">10 Min</button>
+    <button type="button" data-v="15">15 Min</button>
+   </div>
+   <p class="small">Wie eine kleine Ex/Stegreifaufgabe: gemischte Richtung, nur Tippen/Sprechen, <b>keine</b> Zwischenlösung. Note nach bayerischem Schlüssel.</p>
+  </div>
+  <div id="resume-box" hidden>
+   <button type="button" class="btn warn" id="b-resume">▶️ Offenen Test weitermachen</button>
+  </div>
+  <div id="past-tests" class="small" style="margin-top:10px"></div>
   <span class="lab">Rundenlänge</span>
   <div class="seg" id="len">
    <button type="button" data-v="10" class="on">10 Wörter</button>
@@ -165,7 +192,9 @@ h1{font-size:28px;margin:8px 0 2px;text-align:center;color:var(--blau)}
 var PRAISE = ["Super", "Klasse", "Stark", "Prima", "Toll", "Spitze", "Genau", "Bravo"];
 var COMFORT = ["Nicht schlimm – merke es dir:", "Fast! Schau nochmal:", "Kein Problem, daraus lernst du:"];
 var LIVES = 3, ROUND_DEFAULT = 10;
-var S = { units: [], dir: "en2de", mode: "mc", len: 10, round: [], i: 0, lives: LIVES, pts: 0, streak: 0, ok: 0, wrong: [], answered: false, matchPairs: null, matchSel: null, practiceWrong: null };
+var S = { units: [], dir: "en2de", mode: "mc", len: 10, testlen: 10, timerOn: false, timerMin: 5, round: [], i: 0, lives: LIVES, pts: 0, streak: 0, ok: 0, wrong: [], answered: false, matchPairs: null, matchSel: null, practiceWrong: null, testMode: false, answers: [], timerId: null, timerLeft: 0 };
+function noteFromPct(p) { return p >= 92 ? 1 : p >= 80 ? 2 : p >= 66 ? 3 : p >= 50 ? 4 : p >= 30 ? 5 : 6; }
+var NOTE_KEY = "1 ≥92 % · 2 ≥80 % · 3 ≥66 % · 4 ≥50 % · 5 ≥30 % · 6 darunter";
 window.__vok = { S: S };
 var DATA = null, WORDS = [], UNITS = [];
 var store = {
@@ -219,6 +248,7 @@ function buildHome() {
   if (hasSpeechRec()) info = "🎤 Spracherkennung ist in diesem Browser verfügbar (braucht Internet und Mikrofon-Erlaubnis).";
   else info = "🎤 Spracherkennung fehlt hier. Tipp auf dem iPhone: Im Eingabefeld auf das Mikrofon der Tastatur tippen (Diktierfunktion) – das geht in Safari und oft auch woanders.";
   $("speech-info").textContent = info;
+  try { syncModeUI(); } catch (e) {}
 }
 $("b-all").onclick = function () { S.units = UNITS.map(function (u) { return u.id; }); store.set("units", S.units); buildHome(); };
 
@@ -231,10 +261,50 @@ function bindSeg(id, key) {
   var cur = store.get(key, S[key]); S[key] = cur;
   for (var k = 0; k < bs.length; k++) { bs[k].classList.toggle("on", bs[k].getAttribute("data-v") === cur); }
 }
-bindSeg("dir", "dir"); bindSeg("mode", "mode"); bindSeg("len", "len");
+bindSeg("dir", "dir"); bindSeg("mode", "mode"); bindSeg("len", "len"); bindSeg("testlen", "testlen"); bindSeg("timermin", "timerMin");
+function syncModeUI() {
+  var isTest = S.mode === "test";
+  $("test-opts").hidden = !isTest;
+  $("dir").parentElement.querySelector(".lab").style.opacity = isTest ? ".5" : "1";
+  // Richtung bei Test immer gemischt – Anzeige
+  if (isTest) {
+    var bs = $("dir").querySelectorAll("button");
+    for (var i = 0; i < bs.length; i++) { bs[i].classList.toggle("on", bs[i].getAttribute("data-v") === "mixed"); bs[i].disabled = true; }
+    S.dir = "mixed";
+  } else {
+    var bs2 = $("dir").querySelectorAll("button");
+    for (var j = 0; j < bs2.length; j++) bs2[j].disabled = false;
+  }
+  $("len").hidden = isTest;
+  var labs = document.querySelectorAll(".lab");
+  // show resume if draft
+  var draft = store.get("testDraft", null);
+  $("resume-box").hidden = !(draft && draft.round && draft.round.length);
+  // past tests
+  var past = store.get("testResults", []);
+  if (past.length) {
+    var h = "<b>Letzte Tests:</b><ul style='margin:4px 0;padding-left:18px'>";
+    past.slice(0, 5).forEach(function (t) {
+      h += "<li>" + esc(t.date) + " · " + esc((t.units || []).join(", ")) + " · Note <b>" + t.note + "</b> (" + t.pct + " %)</li>";
+    });
+    h += "</ul>"; $("past-tests").innerHTML = h;
+  } else $("past-tests").innerHTML = "";
+}
+$("timer-on").onchange = function () { S.timerOn = this.checked; $("timermin").hidden = !this.checked; store.set("timerOn", S.timerOn); };
+S.timerOn = !!store.get("timerOn", false); $("timer-on").checked = S.timerOn; $("timermin").hidden = !S.timerOn;
+// wrap mode clicks
+(function () {
+  var box = $("mode"), bs = box.querySelectorAll("button");
+  for (var i = 0; i < bs.length; i++) {
+    bs[i].addEventListener("click", function () { setTimeout(syncModeUI, 0); });
+  }
+})();
+$("b-resume").onclick = function () { resumeTest(); };
+syncModeUI();
 
 function startRound(forceWords) {
   if (!S.units.length) S.units = [UNITS[0].id];
+  if (S.mode === "test" && !forceWords) { startTest(); return; }
   var count = S.len === "all" ? 9999 : +S.len;
   var pool = WORDS, unitIds = S.units.slice();
   if (forceWords && forceWords.length) {
@@ -427,6 +497,208 @@ function submit(res, r, given) {
   setTimeout(function () { var el = $("q-f"); if (el && el.scrollIntoView) el.scrollIntoView({ behavior: "smooth", block: "nearest" }); }, 40);
 }
 
+
+/* ---- Vokabeltest mit Note ---- */
+function startTest() {
+  try {
+    var n = +S.testlen || 10;
+    S.testMode = true; S.dir = "mixed";
+    S.round = Vok.buildRound(WORDS, S.units, "mixed", "type", n);
+    S.round.forEach(function (r) { r.mode = "type"; r.speakMode = false; r.test = true; });
+    S.i = 0; S.answers = []; S.lives = 99; S.pts = 0; S.streak = 0; S.ok = 0; S.wrong = []; S.answered = false;
+    if (S.timerOn) { S.timerLeft = (+S.timerMin || 5) * 60; startTimer(); } else { stopTimer(); }
+    saveDraft();
+    nextTestQ();
+  } catch (e) { showTestError(e); }
+}
+function resumeTest() {
+  try {
+    var d = store.get("testDraft", null); if (!d || !d.round) return;
+    S.testMode = true; S.mode = "test"; S.dir = "mixed";
+    S.round = d.round; S.i = d.i || 0; S.answers = d.answers || [];
+    S.units = d.units || S.units; S.testlen = d.testlen || S.testlen;
+    S.timerOn = !!d.timerOn; S.timerLeft = d.timerLeft || 0;
+    S.lives = 99; S.pts = 0; S.streak = 0; S.ok = 0; S.wrong = []; S.answered = false;
+    if (S.timerOn && S.timerLeft > 0) startTimer(); else stopTimer();
+    nextTestQ();
+  } catch (e) { showTestError(e); }
+}
+function saveDraft() {
+  try {
+    store.set("testDraft", { round: S.round, i: S.i, answers: S.answers, units: S.units, testlen: S.testlen, timerOn: S.timerOn, timerLeft: S.timerLeft, savedAt: Date.now() });
+  } catch (e) {}
+}
+function clearDraft() { try { store.set("testDraft", null); } catch (e) {} }
+function startTimer() {
+  stopTimer();
+  S.timerId = setInterval(function () {
+    S.timerLeft--; saveDraft();
+    var el = $("q-timer"); if (el) el.textContent = formatTime(S.timerLeft);
+    if (S.timerLeft <= 0) { stopTimer(); finishTest(true); }
+  }, 1000);
+}
+function stopTimer() { if (S.timerId) { clearInterval(S.timerId); S.timerId = null; } }
+function formatTime(s) { if (s < 0) s = 0; var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r; }
+function nextTestQ() {
+  try {
+    if (S.i >= S.round.length) { finishTest(false); return; }
+    var r = S.round[S.i]; S.answered = false;
+    $("q-l").textContent = "📝 Test · " + r.word.unit;
+    $("q-n").textContent = "Wort " + (S.i + 1) + " / " + S.round.length;
+    $("q-dir").textContent = (r.dir === "en2de" ? "Englisch → Deutsch" : "Deutsch → Englisch") + (S.timerOn ? "" : "");
+    $("q-word").textContent = r.prompt;
+    setupTts(r.askSide === "en" ? r.word.en : r.word.de, r.askSide === "en" ? "en-GB" : "de-DE");
+    $("q-m").innerHTML = S.timerOn ? '<div class="timer" id="q-timer">' + formatTime(S.timerLeft) + "</div>" : "";
+    $("q-f").innerHTML = "";
+    // Eingabe wie Tippen, aber ohne sofortiges Feedback
+    var h = '<div class="ansrow"><input id="inp" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="next" placeholder="Antwort" aria-label="Antwort">';
+    h += '<button type="button" class="mic" id="b-mic" title="Einsprechen">🎤</button></div>';
+    h += '<div class="heard" id="heard"></div>';
+    h += '<div class="row2"><button type="button" class="btn" id="b-nextq">Weiter ➜</button>';
+    h += '<button type="button" class="btn grau" id="b-submit">📝 Abgeben</button></div>';
+    h += '<p class="small center">Keine Zwischenlösung – erst nach dem Abgeben siehst du die Note.</p>';
+    $("q-a").innerHTML = h;
+    // restore previous answer if any
+    if (S.answers[S.i] && S.answers[S.i].given != null) $("inp").value = S.answers[S.i].given;
+    $("b-nextq").onclick = function () { saveTestAnswer(true); };
+    $("b-submit").onclick = function () { ask("Test jetzt abgeben und Note berechnen?", function () { saveTestAnswer(false); finishTest(false); }); };
+    $("inp").onkeydown = function (e) { if (e.key === "Enter") { e.preventDefault(); saveTestAnswer(true); } };
+    $("inp").oninput = function () { saveTestAnswer(false); };
+    setupMicTest(r);
+    hudTest(); show("s-game");
+    try { $("inp").focus(); } catch (e) {}
+  } catch (e) { showTestError(e); }
+}
+function hudTest() {
+  $("t-h").textContent = "📝"; $("t-p").textContent = (S.i + 1) + "/" + S.round.length;
+  $("t-s").textContent = S.timerOn ? formatTime(S.timerLeft) : "";
+  $("t-bar").style.width = (100 * S.i / S.round.length) + "%";
+}
+function setupMicTest(r) {
+  // wie setupMic, aber nur Text in Eingabefeld, kein submit
+  var b = $("b-mic");
+  if (!hasSpeechRec()) {
+    b.onclick = function () { $("heard").textContent = "Spracherkennung fehlt. Nutze das Mikrofon der Tastatur."; try { $("inp").focus(); } catch (e) {} };
+    return;
+  }
+  b.onclick = function () {
+    var Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!Rec) return;
+    if (b.classList.contains("listening")) return;
+    var rec = new Rec();
+    rec.lang = r.ansSide === "en" ? "en-GB" : "de-DE";
+    rec.interimResults = false; rec.maxAlternatives = 5; rec.continuous = false;
+    b.classList.add("listening"); $("heard").textContent = "Ich höre zu …";
+    rec.onresult = function (ev) {
+      b.classList.remove("listening");
+      try {
+        var t = ev.results[0][0].transcript;
+        $("inp").value = t; $("heard").textContent = "Erkannt: „" + t + "“"; saveTestAnswer(false);
+      } catch (e) { $("heard").textContent = "Nichts erkannt."; }
+    };
+    rec.onerror = function (ev) {
+      b.classList.remove("listening");
+      var msg = "Fehler";
+      if (ev.error === "not-allowed") msg = "Mikrofon-Erlaubnis fehlt. Nutze das Diktier-Symbol der Tastatur.";
+      else if (ev.error === "network") msg = "Spracherkennung braucht Internet. Offline: tippe oder Diktier-Symbol der Tastatur.";
+      else if (ev.error === "no-speech") msg = "Nichts gehört – nochmal 🎤 oder tippen.";
+      else msg = "Spracherkennung: " + (ev.error || "?") + ". Ausweg: Diktier-Symbol der Tastatur.";
+      $("heard").textContent = msg;
+    };
+    rec.onend = function () { b.classList.remove("listening"); };
+    try { rec.start(); } catch (e) { b.classList.remove("listening"); $("heard").textContent = "Konnte nicht starten – nutze die Tastatur."; }
+  };
+}
+function saveTestAnswer(advance) {
+  try {
+    var r = S.round[S.i]; if (!r) return;
+    var given = ($("inp") && $("inp").value) || "";
+    S.answers[S.i] = { given: given, prompt: r.prompt, answer: r.answer, word: r.word, dir: r.dir, ansSide: r.ansSide };
+    saveDraft();
+    if (advance) {
+      if (S.i + 1 >= S.round.length) {
+        ask("Letztes Wort gespeichert. Test jetzt abgeben?", function () { finishTest(false); });
+      } else { S.i++; nextTestQ(); }
+    }
+  } catch (e) { showTestError(e); }
+}
+function gradeOne(given, answer, side) {
+  try {
+    var c = Vok.checkTyped(given, answer, side);
+    if (c.res === "correct") return { pts: 1, mark: "ok", label: "richtig" };
+    if (c.res === "almost") return { pts: 0.5, mark: "half", label: "fast (0,5)" };
+    if (!String(given || "").trim()) return { pts: 0, mark: "bad", label: "keine Antwort" };
+    return { pts: 0, mark: "bad", label: "falsch" };
+  } catch (e) { return { pts: 0, mark: "bad", label: "Fehler" }; }
+}
+function finishTest(timedOut) {
+  try {
+    stopTimer();
+    // sicherstellen, dass aktuelle Eingabe gespeichert ist
+    try { if ($("inp") && S.round[S.i]) saveTestAnswer(false); } catch (e) {}
+    var total = S.round.length, pts = 0;
+    var rows = [];
+    for (var i = 0; i < total; i++) {
+      var r = S.round[i];
+      var a = S.answers[i] || { given: "", answer: r.answer, prompt: r.prompt, word: r.word, ansSide: r.ansSide };
+      var g = gradeOne(a.given, r.answer, r.ansSide);
+      pts += g.pts;
+      rows.push({ prompt: r.prompt, given: a.given || "—", answer: r.answer, mark: g.mark, label: g.label, word: r.word, ex: r.word.ex });
+      if (g.pts < 1) S.wrong.push(r.word); else saveWord(r.word.id, true);
+      if (g.pts < 1) saveWord(r.word.id, false);
+    }
+    var pct = total ? Math.round(1000 * pts / total) / 10 : 0;
+    var note = noteFromPct(pct);
+    clearDraft();
+    // history
+    var past = store.get("testResults", []);
+    past.unshift({ date: new Date().toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" }), units: S.units.slice(), note: note, pct: pct, pts: pts, total: total });
+    store.set("testResults", past.slice(0, 10));
+    // Ergebnis immer anzeigen
+    $("e-t").textContent = timedOut ? "⏰ Zeit abgelaufen" : "📝 Testergebnis";
+    $("e-s").innerHTML = '<div class="note-big">' + note + "</div>";
+    $("e-ok").textContent = pts + " / " + total;
+    $("e-p").textContent = pct + " %";
+    $("e-x").innerHTML = "Note <b>" + note + "</b> nach bayerischem Schlüssel<br><span class='small'>" + NOTE_KEY + "</span>";
+    var html = "<b>Alle Antworten:</b><ul class='rev'>";
+    rows.forEach(function (row, idx) {
+      html += "<li class='" + row.mark + "'><b>" + (idx + 1) + ".</b> " + esc(row.prompt) + " → <b>" + esc(row.answer) + "</b>";
+      html += "<br><span class='small'>Deine Antwort: " + esc(row.given) + " · " + row.label + "</span>";
+      if (row.ex) html += "<br><span class='ex'>" + esc(row.ex) + "</span>";
+      html += "</li>";
+    });
+    html += "</ul>";
+    $("e-wrong").innerHTML = html;
+    var uniq = []; var seen = {};
+    S.wrong.forEach(function (w) { if (!seen[w.id]) { seen[w.id] = 1; uniq.push(w); } });
+    if (uniq.length) {
+      $("b-retry").hidden = false;
+      $("b-retry").onclick = function () {
+        S.mode = "type"; S.practiceWrong = uniq; S.testMode = false;
+        // Mode-UI zurück
+        var bs = $("mode").querySelectorAll("button");
+        for (var i = 0; i < bs.length; i++) bs[i].classList.toggle("on", bs[i].getAttribute("data-v") === "type");
+        syncModeUI(); startRound(uniq);
+      };
+    } else { $("b-retry").hidden = true; }
+    S.testMode = false;
+    show("s-end");
+  } catch (e) { showTestError(e); }
+}
+function showTestError(e) {
+  try {
+    stopTimer();
+    $("e-t").textContent = "Ergebnis";
+    $("e-s").textContent = "⚠️";
+    $("e-ok").textContent = "–"; $("e-p").textContent = "–";
+    $("e-x").textContent = "Beim Auswerten ist etwas schiefgelaufen. Deine Eingaben sind ggf. noch unter „Weitermachen“ gespeichert.";
+    $("e-wrong").innerHTML = "<p class='small'>" + esc(String(e && e.message || e)) + "</p>";
+    $("b-retry").hidden = true;
+    show("s-end");
+  } catch (e2) {
+    var b = $("err"); if (b) { b.style.display = "block"; b.textContent = "Fehler im Test. Bitte Seite neu laden."; }
+  }
+}
 /* ---- Zuordnen ---- */
 function startMatch() {
   var items = S.round.slice(0, Math.min(8, S.round.length));
@@ -500,9 +772,15 @@ function endRound() {
   store.set("last", { mode: S.mode, dir: S.dir, units: S.units });
   show("s-end");
 }
-$("b-again").onclick = function () { startRound(S.practiceWrong); };
-$("b-home").onclick = function () { buildHome(); show("s-home"); };
-$("b-quit").onclick = function () { ask("Runde wirklich beenden?", function () { buildHome(); show("s-home"); }); };
+$("b-again").onclick = function () { if (S.mode === "test") startTest(); else startRound(S.practiceWrong); };
+$("b-home").onclick = function () { buildHome(); syncModeUI(); show("s-home"); };
+$("b-quit").onclick = function () {
+  if (S.testMode) {
+    ask("Test unterbrechen? Deine Antworten bleiben gespeichert – du kannst später weitermachen.", function () {
+      saveDraft(); stopTimer(); S.testMode = false; buildHome(); syncModeUI(); show("s-home");
+    });
+  } else ask("Runde wirklich beenden?", function () { buildHome(); show("s-home"); });
+};
 
 // Fehlerbanner (ohne cross-origin Script error)
 (function () {
